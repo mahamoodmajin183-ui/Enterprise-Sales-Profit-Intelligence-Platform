@@ -172,7 +172,7 @@ Open your browser at `http://localhost:8501`.
 
 ## 5. Automated Testing & Verification Results
 
-The test suite validates pipeline integrity across 13 distinct criteria:
+The test suite validates pipeline integrity across 17 distinct criteria:
 
 | Test Module | Test Case | Status |
 | :--- | :--- | :--- |
@@ -181,6 +181,10 @@ The test suite validates pipeline integrity across 13 distinct criteria:
 | `test_data_cleaning.py` | `test_duplicate_and_invalid_filtering` | **PASSED** |
 | `test_data_cleaning.py` | `test_returns_flagging` | **PASSED** |
 | `test_data_cleaning.py` | `test_shipping_logic` | **PASSED** |
+| `test_data_cleaning.py` | `test_reconciliation_and_rejections_recorded` (Initial = Cleaned + Rejected) | **PASSED** |
+| `test_data_cleaning.py` | `test_empty_input_dataset` (Graceful empty handling) | **PASSED** |
+| `test_data_cleaning.py` | `test_schema_validation_missing_columns` (Missing schema guard) | **PASSED** |
+| `test_data_cleaning.py` | `test_repeatable_execution_idempotency` (Deterministic output) | **PASSED** |
 | `test_edge_cases.py` | `test_empty_dataframe_kpis` | **PASSED** |
 | `test_edge_cases.py` | `test_single_row_dataframe` | **PASSED** |
 | `test_edge_cases.py` | `test_anomaly_detector_handles_no_anomalies` | **PASSED** |

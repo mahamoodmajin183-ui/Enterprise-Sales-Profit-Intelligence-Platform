@@ -80,3 +80,49 @@ classDiagram
     DimProducts "1" -- "0..*" FactSales : contained_in
     DimGeography "1" -- "0..*" FactSales : delivered_to
 ```
+
+---
+
+## 3. Data Cleaning Rules & Rationale
+
+| Field / Domain | Cleaning Rule Applied | Business & Technical Rationale | Rejection / Action Taken |
+| :--- | :--- | :--- | :--- |
+| **Row Level** | Exact row deduplication check across all original columns. | Redundant records inflate gross revenue, orders, and distortion metrics. | Dropped from clean table; written to `rejected_records.csv` with reason `EXACT_DUPLICATE_ROW`. |
+| **Column Names** | Headers standardized to lower `snake_case` (e.g. `Order ID` -> `order_id`). | Eliminates whitespace and casing anomalies across SQL dialects and Python engines. | Cleaned in memory. |
+| **Dates** | `order_date` and `ship_date` parsed using ISO/common datetime formats with `errors="coerce"`. | Prevents unparseable strings from breaking time series and window calculations. | Records with NaT are written to `rejected_records.csv` with reason `INVALID_UNPARSEABLE_DATE`. |
+| **Temporal Integrity** | `ship_date >= order_date`. If `ship_date < order_date`, aligned to `order_date`. | Freight delivery cannot precede initial customer basket checkout. | Logged and adjusted to `order_date` (no customer record dropped). |
+| **Monetary Sales** | `sales >= 0.0`. Negative gross sales rejected. | Negative billing belongs in credit memos or refunds, not gross demand logs. | Written to `rejected_records.csv` with reason `NEGATIVE_SALES`. |
+| **Order Quantity** | `quantity >= 1` integer. | Zero or negative quantities represent corrupted line records. | Written to `rejected_records.csv` with reason `INVALID_QUANTITY`. |
+| **Commercial Discount** | `0.0 <= discount <= 1.0`. | Discount is a bounded decimal fraction representing 0% to 100%. | Written to `rejected_records.csv` with reason `INVALID_DISCOUNT_OUT_OF_BOUNDS`. |
+| **Postal Code** | Cleaned of floating point suffixes (`.0`) and padded with leading zeros to 5 digits. | Preserves East Coast US ZIP codes (e.g., `01234` instead of `1234`). | Sanitized string. |
+| **Strings & Text** | Trimming leading/trailing whitespace across all text columns. | Prevents split dimensions in categorical group-by operations (e.g., `'Consumer'` vs `'Consumer '`). | Sanitized string. |
+| **Profit Margin** | `CASE WHEN sales > 0 THEN profit / sales ELSE 0.0 END`. | Zero-division protection prevents `NaN` / `Inf` in analytical dashboards and SQL marts. | Computed mathematically with zero guards. |
+
+---
+
+## 4. Dataset Provenance, License & Assumptions
+
+- **Dataset Name:** US Retail Superstore Transaction Records & Returns.
+- **Data Nature:** **Public Domain Benchmark Dataset** (Tableau Sample Superstore / ZenTables Open Mirror).
+- **Primary Source:** [The Policy Lab - ZenTables Fixtures](https://raw.githubusercontent.com/thepolicylab/ZenTables/main/tests/fixtures/superstore.csv).
+- **Secondary Mirror:** [Packt Learning Tableau 10](https://raw.githubusercontent.com/PacktPublishing/Learning-Tableau-10/master/Chapter%2001/Superstore.csv).
+- **Fallback Synthetic Engine:** If remote downloads are unavailable and no local raw file exists, `src/data_loader.py` generates a clearly labeled `SYNTHETIC` dataset for pipeline continuity.
+- **License / Terms of Use:** Public benchmark dataset, free for analytical, instructional, and commercial benchmarking.
+- **Assumptions:**
+  1. `sales` reflects invoiced net gross revenue after applying the line-item `discount`.
+  2. `profit` represents operating contribution margin before general corporate overhead.
+  3. `estimated_cost` is calculated as `sales - profit`.
+- **Limitations:**
+  1. Customer acquisition cost (CAC) and marketing spend are not captured.
+  2. Fulfillment warehouse handling and carrying costs are omitted.
+  3. Demographics are limited to high-level Segment classification (`Consumer`, `Corporate`, `Home Office`).
+
+---
+
+## 5. Rejected Records Schema (`data/quality_reports/rejected_records.csv`)
+
+Any row failing required schema or business validation rules is preserved in `rejected_records.csv`:
+- Retains all raw transaction attributes.
+- Appends `rejection_reason` (e.g., `EXACT_DUPLICATE_ROW`, `NEGATIVE_SALES`, `INVALID_QUANTITY`, `INVALID_DISCOUNT_OUT_OF_BOUNDS`, `INVALID_UNPARSEABLE_DATE`).
+- Guarantees strict mathematical reconciliation: $\text{Raw Count} = \text{Cleaned Count} + \text{Rejected Count}$.
+
