@@ -1,0 +1,89 @@
+{
+  "validation_status": "PASSED",
+  "tolerances": {
+    "monetary_tolerance_usd": 0.05,
+    "percentage_tolerance_pct": 0.05,
+    "count_tolerance": 0
+  },
+  "audits": {
+    "executive_kpis": {
+      "category": "Executive KPIs",
+      "passed": true,
+      "checks": {
+        "total_revenue": {
+          "py": 2297200.65,
+          "sql": 2297200.65,
+          "delta": 0.0,
+          "tolerance": 0.05,
+          "passed": true
+        },
+        "total_profit": {
+          "py": 286396.54,
+          "sql": 286396.54,
+          "delta": 0.0,
+          "tolerance": 0.05,
+          "passed": true
+        },
+        "total_orders": {
+          "py": 5009,
+          "sql": 5009,
+          "delta": 0,
+          "tolerance": 0,
+          "passed": true
+        },
+        "total_customers": {
+          "py": 793,
+          "sql": 793,
+          "delta": 0,
+          "tolerance": 0,
+          "passed": true
+        },
+        "total_units": {
+          "py": 37873,
+          "sql": 37873,
+          "delta": 0,
+          "tolerance": 0,
+          "passed": true
+        },
+        "profit_margin_pct": {
+          "py": 12.47,
+          "sql": 12.47,
+          "delta": 0.0,
+          "tolerance": 0.05,
+          "passed": true
+        },
+        "avg_order_value": {
+          "py": 458.61,
+          "sql": 458.61,
+          "delta": 0.0,
+          "tolerance": 0.05,
+          "passed": true
+        }
+      }
+    },
+    "category_mart": {
+      "category": "Category Mart",
+      "passed": true,
+      "max_revenue_delta": 0.0,
+      "max_profit_delta": 0.0,
+      "max_orders_delta": 0,
+      "sub_categories_checked": 17
+    },
+    "monthly_mart": {
+      "category": "Monthly Mart",
+      "passed": true,
+      "max_revenue_delta": 0.0,
+      "max_profit_delta": 0.0,
+      "max_orders_delta": 0,
+      "months_checked": 48
+    },
+    "regional_mart": {
+      "category": "Regional Mart",
+      "passed": true,
+      "max_revenue_delta": 0.0,
+      "max_profit_delta": 0.0,
+      "max_orders_delta": 0,
+      "states_checked": 49
+    }
+  }
+}

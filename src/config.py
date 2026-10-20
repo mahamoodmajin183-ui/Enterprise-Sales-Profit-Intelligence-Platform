@@ -30,6 +30,7 @@ DUCKDB_DATABASE_FILE = DATABASE_DIR / "sales_warehouse.duckdb"
 PROFILING_REPORT_FILE = QUALITY_REPORTS_DIR / "profiling_metrics.json"
 VALIDATION_REPORT_FILE = QUALITY_REPORTS_DIR / "validation_summary.json"
 REJECTED_RECORDS_FILE = QUALITY_REPORTS_DIR / "rejected_records.csv"
+SQL_PYTHON_RECONCILIATION_REPORT_FILE = QUALITY_REPORTS_DIR / "sql_python_reconciliation_report.json"
 
 # Ensure all directories exist
 for directory in [RAW_DATA_DIR, PROCESSED_DATA_DIR, QUALITY_REPORTS_DIR, DATABASE_DIR, SQL_DIR, DOCS_DIR]:

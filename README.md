@@ -173,7 +173,7 @@ Open your browser at `http://localhost:8501`.
 
 ## 5. Automated Testing & Verification Results
 
-The test suite validates pipeline integrity across 17 distinct criteria:
+The test suite validates pipeline integrity across 22 distinct criteria:
 
 | Test Module | Test Case | Status |
 | :--- | :--- | :--- |
@@ -192,8 +192,13 @@ The test suite validates pipeline integrity across 17 distinct criteria:
 | `test_metrics_calculation.py` | `test_safe_divide` (Zero-denominator protection) | **PASSED** |
 | `test_metrics_calculation.py` | `test_kpi_calculations_with_zero_revenue` | **PASSED** |
 | `test_metrics_calculation.py` | `test_metrics_engine_aggregations` | **PASSED** |
+| `test_metrics_calculation.py` | `test_customer_metrics_deciles` (Customer lifetime & deciles) | **PASSED** |
+| `test_metrics_calculation.py` | `test_multi_line_order_aggregation_no_double_counting` (Distinct basket counts) | **PASSED** |
+| `test_metrics_calculation.py` | `test_top_bottom_product_cohorts` (Revenue-trap detection) | **PASSED** |
 | `test_reconciliation.py` | `test_python_duckdb_reconciliation` ($0.00 delta) | **PASSED** |
 | `test_reconciliation.py` | `test_category_mart_reconciliation` | **PASSED** |
+| `test_reconciliation.py` | `test_customer_mart_reconciliation` | **PASSED** |
+| `test_reconciliation.py` | `test_regional_mart_reconciliation` | **PASSED** |
 
 ---
 

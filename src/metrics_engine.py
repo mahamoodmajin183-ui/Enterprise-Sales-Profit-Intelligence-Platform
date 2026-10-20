@@ -216,6 +216,72 @@ class MetricsEngine:
         )
         return disc.sort_values("avg_discount_pct").reset_index(drop=True)
 
+    def get_customer_metrics(self, df_subset: Optional[pd.DataFrame] = None) -> pd.DataFrame:
+        """Calculate customer lifetime spend, profit, units, and value deciles."""
+        df = df_subset if df_subset is not None else self.df
+        if df.empty:
+            return pd.DataFrame()
+
+        cust = (
+            df.groupby(["customer_id", "customer_name", "segment"])
+            .agg(
+                total_orders=("order_id", "nunique"),
+                total_units_bought=("quantity", "sum"),
+                lifetime_revenue_usd=("sales", "sum"),
+                lifetime_profit_usd=("profit", "sum"),
+                avg_discount_received=("discount", "mean"),
+                unprofitable_lines=("profit", lambda s: int((s < 0).sum())),
+            )
+            .reset_index()
+        )
+        cust["lifetime_revenue_usd"] = cust["lifetime_revenue_usd"].round(2)
+        cust["lifetime_profit_usd"] = cust["lifetime_profit_usd"].round(2)
+        cust["lifetime_margin_pct"] = cust.apply(
+            lambda r: round(safe_divide(r["lifetime_profit_usd"], r["lifetime_revenue_usd"]) * 100, 2), axis=1
+        )
+        cust["avg_discount_received_pct"] = (cust["avg_discount_received"] * 100).round(2)
+        cust["revenue_decile"] = pd.qcut(
+            cust["lifetime_revenue_usd"].rank(method="first", ascending=False),
+            q=10,
+            labels=list(range(1, 11)),
+        ).astype(int)
+
+        return cust.sort_values("lifetime_profit_usd", ascending=False).reset_index(drop=True)
+
+    def get_top_bottom_products(self, n: int = 10, df_subset: Optional[pd.DataFrame] = None) -> Dict[str, pd.DataFrame]:
+        """Identify top and bottom products by revenue, profit, and revenue-traps."""
+        df = df_subset if df_subset is not None else self.df
+        if df.empty:
+            return {}
+
+        prod = (
+            df.groupby(["product_id", "product_name", "category", "sub_category"])
+            .agg(
+                orders_count=("order_id", "nunique"),
+                units_sold=("quantity", "sum"),
+                total_revenue=("sales", "sum"),
+                total_profit=("profit", "sum"),
+            )
+            .reset_index()
+        )
+        prod["total_revenue"] = prod["total_revenue"].round(2)
+        prod["total_profit"] = prod["total_profit"].round(2)
+        prod["profit_margin_pct"] = prod.apply(
+            lambda r: round(safe_divide(r["total_profit"], r["total_revenue"]) * 100, 2), axis=1
+        )
+
+        top_profit = prod.sort_values("total_profit", ascending=False).head(n).reset_index(drop=True)
+        bottom_profit = prod.sort_values("total_profit", ascending=True).head(n).reset_index(drop=True)
+        top_revenue = prod.sort_values("total_revenue", ascending=False).head(n).reset_index(drop=True)
+        revenue_traps = prod[(prod["total_revenue"] >= 5000.0) & (prod["profit_margin_pct"] < 5.0)].sort_values("total_revenue", ascending=False).reset_index(drop=True)
+
+        return {
+            "top_profitable": top_profit,
+            "loss_leaders": bottom_profit,
+            "top_revenue": top_revenue,
+            "revenue_traps": revenue_traps,
+        }
+
     def reconcile_with_duckdb(self) -> Dict[str, Any]:
         """Perform reconciliation check between Python engine and DuckDB warehouse."""
         py_kpis = self.calculate_executive_kpis()
