@@ -92,6 +92,29 @@ A high proportion of enterprise losses are concentrated in 6 states where discou
 
 ---
 
+### Finding 5: Customer Lifetime Value Concentration & Segment Dynamics
+
+Analysis of customer ordering patterns across 793 accounts reveals strong Pareto concentration:
+- **Top 10% Decile Contribution**: The top decile (79 customers) accounts for **$921,410.82** in gross revenue (**40.11% of total enterprise revenue**) and **$139,812.44** in operating profit (**48.82% of enterprise profit**).
+- **Top 3 Customer Contributors**:
+  1. **Tamara Chand (Corporate)**: $19,052.22 revenue | **$8,981.32 profit** (47.14% margin, 5 orders).
+  2. **Raymond Buch (Consumer)**: $15,117.35 revenue | **$6,976.09 profit** (46.15% margin, 6 orders).
+  3. **Sanjit Chand (Consumer)**: $14,142.34 revenue | **$5,757.42 profit** (40.71% margin, 9 orders).
+- **Segment Breakdown**:
+  - `Consumer`: 50.56% of total revenue ($1,161,401.34) | $134,119.21 profit (11.55% margin).
+  - `Corporate`: 30.74% of total revenue ($706,146.37) | $91,979.11 profit (13.03% margin).
+  - `Home Office`: 18.70% of total revenue ($429,652.94) | $60,298.22 profit (14.03% margin).
+
+---
+
+### Finding 6: Forensic Outlier & Severe Loss Transaction Analysis
+
+Querying transactions with losses exceeding -$500 or excessive discounting reveals **168 extreme loss anomalies**:
+- **Critical Drains (> $1,000 Loss per single transaction)**: 21 transactions generated cumulative losses exceeding **-$39,000**.
+- **Top Single Loss Event**: Order `CA-2013-108196` in Ohio — 5 units of `Cubify CubeX 3D Printer Double Head` sold at a 70% discount resulted in a single transaction loss of **-$6,599.98** (-146.7% margin).
+- **Operational Pattern**: Outliers are not random noise; they consistently reflect high-ticket Technology/Machine hardware or bulk Furniture orders combined with unconstrained commercial discount percentages (> 50%).
+
+
 ## 3. Data Quality & Pipeline Audit Results
 
 During ingestion and automated profiling of the transaction dataset:

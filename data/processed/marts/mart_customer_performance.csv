@@ -1,0 +1,794 @@
+customer_id,customer_name,segment,total_orders,total_units_bought,total_revenue,total_profit,profit_margin_pct,avg_discount_pct
+JC-16105,Julie Creighton,Corporate,5,43.0,858.57,201.6,23.48,4.44
+RB-19465,Rick Bensley,Home Office,12,85.0,4715.47,640.55,13.58,13.48
+RD-19900,Ruben Dartt,Consumer,9,85.0,3133.92,455.53,14.54,5.71
+JB-15400,Jennifer Braxton,Corporate,10,43.0,1791.62,156.05,8.71,20.63
+SJ-20500,Shirley Jackson,Consumer,5,30.0,1318.77,68.09,5.16,14.29
+DB-13120,David Bremer,Corporate,7,59.0,2973.09,-1421.78,-47.82,14.29
+AG-10495,Andrew Gjertsen,Corporate,8,93.0,2356.86,295.68,12.55,20.48
+DJ-13510,Don Jones,Corporate,8,52.0,2501.69,345.26,13.8,6.92
+AC-10420,Alyssa Crouse,Corporate,3,17.0,925.8,-62.13,-6.71,32.0
+MK-17905,Michael Kennedy,Corporate,8,73.0,2302.36,-405.34,-17.61,30.0
+RA-19915,Russell Applegate,Consumer,9,75.0,4793.53,304.88,6.36,27.95
+NG-18430,Nathan Gelder,Consumer,5,41.0,1395.94,217.09,15.55,11.11
+KC-16675,Kimberly Carter,Corporate,4,40.0,1146.05,156.76,13.68,8.57
+CJ-12010,Caroline Jumper,Consumer,8,83.0,11164.97,858.75,7.69,18.85
+NF-18385,Natalie Fritzler,Consumer,7,52.0,8322.82,-1695.96,-20.38,25.0
+KH-16630,Ken Heidel,Corporate,9,84.0,3918.96,727.38,18.56,10.59
+SS-20590,Sonia Sunley,Consumer,6,17.0,418.49,135.54,32.39,0.0
+MD-17350,Maribeth Dona,Consumer,7,64.0,3766.4,-241.97,-6.42,32.94
+TG-21640,Trudy Glocke,Consumer,4,50.0,2074.66,365.7,17.63,13.0
+SF-20965,Sylvia Foulston,Corporate,9,66.0,3336.53,539.94,16.18,27.06
+CC-12430,Chuck Clark,Home Office,10,63.0,2870.05,424.63,14.8,5.79
+CR-12730,Craig Reiter,Consumer,4,18.0,1600.55,306.92,19.18,26.67
+DS-13030,Darrin Sayre,Home Office,4,54.0,1762.21,193.34,10.97,13.95
+CS-12250,Chris Selesnick,Corporate,12,97.0,2754.22,738.37,26.81,5.71
+BK-11260,Berenike Kampe,Consumer,6,58.0,659.15,-63.76,-9.67,20.63
+AG-10765,Anthony Garverick,Home Office,4,20.0,170.59,-8.42,-4.94,46.0
+PM-19135,Peter McVee,Home Office,4,36.0,4115.66,526.76,12.8,12.86
+BE-11335,Bill Eplett,Home Office,5,35.0,4204.68,1487.79,35.38,2.22
+JM-15535,Jessica Myrick,Consumer,7,46.0,1733.45,356.53,20.57,9.0
+LW-16990,Lindsay Williams,Corporate,6,38.0,3230.3,662.83,20.52,10.91
+AA-10315,Alex Avila,Consumer,5,30.0,5563.56,-362.87,-6.52,9.09
+AT-10435,Alyssa Tate,Home Office,6,28.0,1171.81,100.87,8.61,20.0
+JR-15700,Jocasta Rupert,Consumer,1,3.0,863.88,107.98,12.5,20.0
+LP-17095,Liz Preis,Consumer,7,52.0,3653.4,338.45,9.26,18.67
+AS-10045,Aaron Smayling,Corporate,7,48.0,3050.69,-253.59,-8.31,35.5
+BP-11290,Beth Paige,Consumer,7,51.0,2475.16,-319.07,-12.89,30.0
+MG-17890,Michael Granlund,Home Office,9,35.0,776.39,171.74,22.12,11.92
+ST-20530,Shui Tom,Consumer,7,33.0,433.34,84.46,19.49,20.0
+NH-18610,Nicole Hansen,Corporate,7,52.0,2673.29,760.16,28.44,5.45
+MY-18295,Muhammed Yedwab,Corporate,11,89.0,4152.7,-371.71,-8.95,24.38
+RD-19480,Rick Duston,Consumer,8,60.0,4272.94,480.59,11.25,10.67
+BS-11380,Bill Stewart,Corporate,5,58.0,3887.82,-17.54,-0.45,27.69
+CD-12280,Christina DeMoss,Consumer,2,39.0,1205.58,233.01,19.33,8.46
+JK-15205,Jamie Kunitz,Consumer,5,67.0,4427.14,1219.97,27.56,13.08
+KH-16330,Katharine Harms,Corporate,8,70.0,3312.87,454.8,13.73,13.89
+AS-10090,Adam Shillingsburg,Consumer,9,81.0,3255.3,64.53,1.98,18.0
+BW-11200,Ben Wallace,Consumer,6,49.0,1738.41,247.0,14.21,15.0
+RF-19345,Randy Ferguson,Corporate,8,67.0,3309.14,633.69,19.15,13.75
+WB-21850,William Brown,Consumer,11,146.0,6160.1,714.34,11.6,20.54
+JH-15820,John Huston,Consumer,6,29.0,528.92,26.07,4.93,15.0
+CV-12295,Christina VanderZanden,Consumer,5,54.0,2830.63,493.09,17.42,7.69
+EM-13810,Eleni McCrary,Corporate,5,23.0,2567.0,-133.82,-5.21,14.29
+JM-15865,John Murray,Consumer,7,50.0,7625.07,1574.62,20.65,18.46
+EN-13780,Edward Nazzal,Consumer,4,27.0,2199.36,496.11,22.56,4.44
+TA-21385,Tom Ashbrook,Home Office,4,36.0,14595.62,4703.8,32.23,8.0
+SB-20170,Sarah Bern,Consumer,3,24.0,1348.02,157.67,11.7,18.57
+GA-14515,George Ashbrook,Consumer,8,48.0,3919.77,840.89,21.45,6.43
+HJ-14875,Heather Jas,Home Office,5,21.0,358.1,98.66,27.55,10.0
+RD-19720,Roger Demir,Consumer,10,78.0,1419.74,207.34,14.6,15.75
+NR-18550,Nick Radford,Consumer,5,37.0,2367.27,-25.14,-1.06,22.31
+JK-15325,Jason Klamczynski,Corporate,3,15.0,383.81,55.33,14.42,10.0
+TS-21655,Trudy Schmidt,Consumer,5,52.0,3368.08,220.9,6.56,19.29
+LD-16855,Lela Donovan,Corporate,1,3.0,5.3,0.46,8.68,20.0
+SC-20770,Stewart Carmichael,Corporate,7,75.0,4492.68,-671.19,-14.94,30.48
+DK-13090,Dave Kipp,Consumer,7,33.0,2650.55,536.4,20.24,13.85
+LS-16975,Lindsay Shagiari,Home Office,9,63.0,2988.65,262.61,8.79,28.18
+HK-14890,Heather Kirkland,Corporate,8,64.0,4877.8,956.96,19.62,21.33
+DL-13315,Delfina Latchford,Consumer,8,74.0,1458.25,288.87,19.81,18.24
+KH-16690,Kristen Hastings,Corporate,7,69.0,5990.79,1227.51,20.49,12.67
+RF-19840,Roy Französisch,Consumer,8,45.0,945.22,280.02,29.62,8.18
+EB-13705,Ed Braxton,Corporate,9,55.0,3644.97,13.62,0.37,25.83
+AJ-10960,Astrea Jones,Consumer,3,22.0,629.25,60.43,9.6,4.0
+LP-17080,Liz Pelletier,Consumer,4,39.0,756.6,110.79,14.64,11.11
+JF-15415,Jennifer Ferguson,Consumer,6,69.0,2371.45,635.64,26.8,7.14
+SF-20200,Sarah Foster,Consumer,9,74.0,3422.78,286.91,8.38,12.67
+NG-18355,Nat Gilpin,Corporate,5,45.0,1869.57,313.63,16.78,8.75
+DJ-13420,Denny Joy,Corporate,4,20.0,2012.52,483.03,24.0,0.0
+JD-16150,Justin Deggeller,Corporate,8,60.0,8828.04,1619.54,18.35,5.59
+TH-21235,Tiffany House,Corporate,8,40.0,1022.21,92.72,9.07,20.77
+SV-20365,Seth Vernon,Consumer,10,109.0,11470.94,1199.44,10.46,15.63
+PO-19195,Phillina Ober,Home Office,5,32.0,1056.85,-49.69,-4.7,19.0
+PJ-19015,Pauline Johnson,Consumer,7,25.0,1824.23,683.01,37.44,8.0
+PK-18910,Paul Knutson,Home Office,2,14.0,1441.15,-798.71,-55.42,36.67
+JR-16210,Justin Ritter,Corporate,5,41.0,2201.69,452.37,20.55,22.0
+RW-19690,Robert Waldorf,Consumer,5,61.0,3495.64,707.55,20.24,7.33
+RA-19945,Ryan Akin,Consumer,5,27.0,1686.93,-445.69,-26.42,31.67
+PV-18985,Paul Van Hugh,Home Office,5,52.0,2876.05,434.53,15.11,8.46
+LH-16750,Larry Hughes,Consumer,3,12.0,287.43,12.63,4.39,36.67
+BG-11695,Brooke Gillingham,Corporate,6,24.0,1874.18,107.59,5.74,13.75
+DC-12850,Dan Campbell,Consumer,9,64.0,3336.17,-1441.64,-43.21,21.11
+EB-13975,Erica Bern,Corporate,4,18.0,1643.26,162.89,9.91,28.33
+KT-16465,Kean Takahito,Consumer,7,45.0,3057.1,254.02,8.31,22.86
+ME-17320,Maria Etezadi,Home Office,10,82.0,10663.73,1859.45,17.44,13.18
+TB-21400,Tom Boeckenhauer,Consumer,7,55.0,9133.99,2798.37,30.64,7.06
+EB-13750,Edward Becker,Corporate,10,91.0,3236.32,-80.29,-2.48,14.5
+MC-17275,Marc Crier,Consumer,8,54.0,2725.98,461.02,16.91,13.08
+FM-14215,Filia McAdams,Corporate,10,48.0,2456.64,249.67,10.16,9.33
+ED-13885,Emily Ducich,Home Office,8,54.0,3484.91,670.45,19.24,21.43
+RM-19375,Raymond Messe,Consumer,6,29.0,1453.47,392.15,26.98,4.44
+CH-12070,Cathy Hwang,Home Office,3,13.0,1537.24,195.15,12.69,15.0
+JS-16030,Joy Smith,Consumer,6,70.0,2516.49,-311.26,-12.37,18.33
+RH-19600,Rob Haberlin,Consumer,3,43.0,2085.74,172.63,8.28,10.91
+PJ-18835,Patrick Jones,Corporate,8,46.0,1220.1,442.14,36.24,7.69
+RS-19420,Ricardo Sperren,Corporate,5,29.0,3221.29,633.45,19.66,0.0
+CM-11935,Carlos Meador,Consumer,2,18.0,565.39,-43.73,-7.73,20.0
+MC-17635,Matthew Clasen,Corporate,4,33.0,795.15,-247.94,-31.18,17.5
+HG-15025,Hunter Glantz,Consumer,7,38.0,3690.28,804.62,21.8,17.27
+DM-12955,Dario Medina,Corporate,7,28.0,1322.03,108.76,8.23,16.67
+JG-15310,Jason Gross,Corporate,6,46.0,2240.58,3.82,0.17,25.45
+CC-12475,Cindy Chapman,Consumer,9,40.0,1659.45,154.85,9.33,16.15
+LB-16795,Laurel Beltran,Home Office,8,76.0,4985.68,-52.18,-1.05,23.75
+TS-21505,Tony Sayre,Consumer,6,54.0,2243.28,11.39,0.51,19.29
+LC-17050,Liz Carlisle,Consumer,5,43.0,2095.06,86.78,4.14,27.22
+FC-14335,Fred Chung,Corporate,7,37.0,3889.36,714.29,18.37,16.0
+RM-19750,Roland Murray,Consumer,1,4.0,98.35,28.68,29.16,0.0
+NC-18415,Nathan Cano,Consumer,6,38.0,2218.99,-2204.81,-99.36,26.43
+DK-12895,Dana Kaydos,Consumer,5,65.0,4282.16,937.65,21.9,8.0
+VS-21820,Vivek Sundaresam,Consumer,4,38.0,1055.99,-262.81,-24.89,47.5
+TM-21490,Tony Molinari,Consumer,3,12.0,1094.68,292.53,26.72,5.0
+AB-10015,Aaron Bergman,Consumer,3,13.0,886.15,129.34,14.6,6.67
+TH-21115,Thea Hudgings,Corporate,4,29.0,2942.78,-252.55,-8.58,23.33
+MA-17560,Matt Abelman,Home Office,11,117.0,4299.16,1240.21,28.85,9.41
+LC-16930,Linda Cazamias,Corporate,8,52.0,4492.94,288.28,6.42,17.14
+KB-16600,Ken Brennan,Corporate,7,29.0,983.93,293.56,29.84,26.67
+KB-16315,Karl Braun,Consumer,9,62.0,1569.45,49.71,3.17,19.55
+DB-13060,Dave Brooks,Consumer,7,48.0,4531.65,473.02,10.44,18.46
+TT-21070,Ted Trevino,Consumer,7,66.0,4915.59,751.97,15.3,11.43
+CS-12130,Chad Sievert,Consumer,4,28.0,884.64,143.83,16.26,11.43
+BS-11755,Bruce Stewart,Consumer,7,45.0,2562.38,-113.31,-4.42,13.21
+EA-14035,Erin Ashbrook,Corporate,13,87.0,2846.71,-52.72,-1.85,30.0
+JO-15280,Jas O'Carroll,Consumer,6,36.0,1934.27,202.14,10.45,17.27
+MV-18190,Mike Vittorini,Consumer,7,37.0,1734.58,273.84,15.79,8.64
+PB-19150,Philip Brown,Consumer,8,54.0,1456.95,280.66,19.26,12.73
+JP-15520,Jeremy Pistek,Consumer,7,63.0,3635.59,757.19,20.83,5.94
+LR-16915,Lena Radford,Consumer,6,64.0,5142.89,535.48,10.41,17.5
+CP-12340,Christine Phan,Corporate,8,59.0,5888.29,-1850.31,-31.42,21.33
+BM-11785,Bryan Mills,Consumer,10,44.0,1338.82,137.72,10.29,25.0
+CK-12760,Cyma Kinney,Corporate,9,64.0,1582.1,-338.44,-21.39,15.0
+LS-16945,Linda Southworth,Corporate,6,51.0,2845.27,-318.76,-11.2,30.71
+GP-14740,Guy Phonely,Corporate,2,21.0,236.53,31.84,13.46,14.0
+TB-21190,Thomas Brumley,Home Office,4,23.0,816.17,179.01,21.93,2.5
+TS-21340,Toby Swindell,Consumer,5,51.0,974.78,-185.0,-18.98,28.33
+VG-21790,Vivek Gonzalez,Consumer,6,32.0,846.02,143.63,16.98,7.5
+PS-19045,Penelope Sewall,Home Office,7,47.0,6843.63,1742.73,25.46,8.46
+EJ-14155,Eva Jacobs,Consumer,5,31.0,2656.69,451.88,17.01,6.25
+MH-18115,Mick Hernandez,Home Office,9,79.0,5503.09,170.98,3.11,16.82
+QJ-19255,Quincy Jones,Corporate,9,61.0,6108.34,1203.69,19.71,12.31
+AB-10105,Adrian Barton,Consumer,10,73.0,14473.56,5444.81,37.62,24.0
+AI-10855,Arianne Irving,Consumer,10,72.0,4375.79,867.73,19.83,7.22
+NS-18505,Neola Schneider,Consumer,4,52.0,2575.87,-12.31,-0.48,20.67
+CC-12685,Craig Carroll,Consumer,4,51.0,2854.11,850.15,29.79,25.0
+CC-12610,Corey Catlett,Corporate,7,39.0,2540.63,331.45,13.05,27.5
+BF-11080,Bart Folk,Consumer,3,29.0,272.95,110.93,40.64,0.0
+AH-10120,Adrian Hane,Home Office,7,65.0,1735.53,-2.29,-0.13,23.75
+BT-11440,Bobby Trafton,Consumer,4,16.0,603.87,-77.52,-12.84,15.71
+PW-19240,Pierre Wener,Consumer,7,39.0,3922.41,1290.34,32.9,17.08
+CL-12700,Craig Leslie,Home Office,5,34.0,2353.59,229.0,9.73,18.75
+NL-18310,Nancy Lomonaco,Home Office,4,44.0,1418.08,343.64,24.23,6.0
+MO-17950,Michael Oakman,Consumer,2,14.0,154.29,-82.01,-53.15,35.0
+BP-11155,Becky Pak,Consumer,6,32.0,1697.87,647.38,38.13,8.18
+AY-10555,Andy Yotov,Corporate,4,34.0,497.02,103.34,20.79,10.0
+DW-13195,David Wiener,Corporate,6,39.0,1080.75,-86.87,-8.04,24.44
+CM-11815,Candace McMahon,Corporate,6,38.0,1673.89,214.45,12.81,12.0
+JO-15145,Jack O'Briant,Corporate,9,59.0,3254.94,581.41,17.86,7.31
+VM-21835,Vivian Mathis,Consumer,5,25.0,380.69,116.64,30.64,11.25
+SP-20920,Susan Pistek,Consumer,6,57.0,3990.67,14.69,0.37,27.14
+DD-13570,Dorothy Dickinson,Consumer,6,33.0,269.53,36.43,13.52,24.44
+BS-11365,Bill Shonely,Corporate,5,39.0,10501.65,2616.06,24.91,1.11
+BD-11560,Brendan Dodson,Home Office,2,11.0,320.54,116.71,36.41,0.0
+RS-19870,Roy Skaria,Home Office,2,10.0,22.33,9.58,42.9,6.67
+CG-12520,Claire Gute,Consumer,3,14.0,1148.78,169.93,14.79,20.0
+SF-20065,Sandra Flanagan,Consumer,7,35.0,763.54,228.17,29.88,10.0
+DP-13000,Darren Powers,Consumer,9,58.0,1050.63,241.44,22.98,21.18
+KM-16720,Kunst Miller,Consumer,8,98.0,4909.47,745.77,15.19,8.93
+JM-15250,Janet Martin,Consumer,6,91.0,3159.11,19.81,0.63,28.95
+NK-18490,Neil Knudson,Home Office,7,51.0,572.05,121.23,21.19,12.73
+BM-11140,Becky Martin,Consumer,4,64.0,11789.64,-1659.97,-14.08,16.88
+AM-10360,Alice McCarthy,Corporate,5,48.0,814.01,194.99,23.95,12.5
+MS-17980,Michael Stewart,Corporate,6,49.0,855.12,55.23,6.46,17.27
+CA-12310,Christine Abelman,Corporate,4,25.0,1421.96,246.01,17.3,11.82
+NZ-18565,Nick Zandusky,Home Office,9,77.0,2488.33,402.42,16.17,17.5
+DO-13435,Denny Ordway,Consumer,9,48.0,1300.03,-38.89,-2.99,15.77
+DB-13210,Dean Braden,Consumer,10,75.0,2332.57,169.96,7.29,18.57
+DK-12985,Darren Koutras,Consumer,5,32.0,1687.03,-107.37,-6.36,16.25
+DV-13465,Dianna Vittorini,Consumer,6,62.0,3341.58,353.21,10.57,11.33
+ZC-21910,Zuschuss Carroll,Consumer,13,105.0,8025.7,-1032.13,-12.86,25.48
+GD-14590,Giulietta Dortch,Corporate,4,25.0,1888.08,230.95,12.23,13.33
+AT-10735,Annie Thurman,Consumer,10,60.0,3831.87,974.12,25.42,8.75
+AR-10825,Anthony Rawles,Corporate,8,54.0,4523.33,494.83,10.94,7.69
+LH-17020,Lisa Hazard,Consumer,4,34.0,318.23,-242.75,-76.28,46.67
+TR-21325,Toby Ritter,Consumer,5,22.0,675.94,220.36,32.6,2.86
+DP-13105,Dave Poirier,Corporate,8,63.0,2214.99,563.17,25.43,11.43
+HL-15040,Hunter Lopez,Consumer,6,50.0,12873.3,5622.43,43.68,1.82
+BD-11620,Brian DeCherney,Consumer,6,27.0,1538.12,206.77,13.44,17.5
+MC-17575,Matt Collins,Consumer,8,40.0,1303.89,210.74,16.16,29.09
+AB-10255,Alejandro Ballentine,Home Office,9,39.0,914.53,264.57,28.93,10.0
+JK-16120,Julie Kriz,Home Office,10,49.0,2932.49,122.66,4.18,20.59
+SC-20440,Shaun Chance,Corporate,7,44.0,1875.0,379.56,20.24,28.0
+MB-18085,Mick Brown,Consumer,7,39.0,1428.24,117.8,8.25,20.0
+MP-18175,Mike Pelletier,Home Office,9,78.0,5087.93,226.47,4.45,15.53
+AW-10840,Anthony Witt,Consumer,4,24.0,649.37,65.78,10.13,20.0
+RH-19510,Rick Huthwaite,Home Office,6,43.0,6979.18,1289.45,18.48,3.33
+AF-10870,Art Ferguson,Consumer,7,51.0,2052.91,317.96,15.49,20.0
+PB-18805,Patrick Bzostek,Home Office,3,54.0,740.36,229.23,30.96,12.0
+KW-16570,Kelly Williams,Consumer,4,22.0,449.1,107.93,24.03,4.0
+AG-10300,Aleksandra Gannaway,Corporate,4,16.0,367.55,59.29,16.13,8.0
+RR-19525,Rick Reed,Corporate,6,36.0,3302.26,721.69,21.85,6.0
+JB-16045,Julia Barnett,Home Office,5,32.0,2518.11,201.52,8.0,18.89
+MG-17875,Michael Grace,Home Office,5,23.0,1242.83,-470.77,-37.88,24.29
+GH-14410,Gary Hansen,Home Office,9,65.0,2819.45,-576.83,-20.46,27.06
+JL-15130,Jack Lebron,Consumer,6,42.0,1214.95,-207.8,-17.1,26.67
+SU-20665,Stephanie Ulpright,Home Office,7,61.0,2595.38,763.48,29.42,13.33
+DH-13675,Duane Huffman,Home Office,4,41.0,1043.09,116.68,11.19,12.27
+AA-10645,Anna Andreadi,Consumer,6,64.0,5086.93,857.8,16.86,6.39
+BG-11035,Barry Gonzalez,Consumer,8,35.0,2798.96,-711.41,-25.42,19.17
+BP-11050,Barry Pond,Corporate,5,30.0,983.42,209.78,21.33,14.29
+TC-21145,Theresa Coyne,Corporate,1,17.0,1038.26,265.53,25.57,0.0
+FW-14395,Fred Wasserman,Corporate,3,9.0,79.75,23.5,29.47,0.0
+BH-11710,Brosina Hoffman,Consumer,8,97.0,6255.33,802.8,12.83,18.33
+EB-13870,Emily Burns,Consumer,10,41.0,2767.22,261.52,9.45,29.09
+TB-21520,Tracy Blumstein,Consumer,9,85.0,4737.48,-1603.06,-33.84,26.5
+PO-18865,Patrick O'Donnell,Consumer,7,54.0,2493.22,437.85,17.56,4.62
+BS-11590,Brendan Sweed,Corporate,6,41.0,2454.93,381.78,15.55,30.0
+JE-15745,Joel Eaton,Consumer,13,90.0,6760.81,221.77,3.28,14.57
+PG-18895,Paul Gonzalez,Consumer,9,61.0,1987.15,334.51,16.83,9.41
+GZ-14470,Gary Zandusky,Consumer,9,48.0,4355.15,1087.75,24.98,7.86
+MG-17680,Maureen Gastineau,Home Office,4,25.0,2350.2,25.89,1.1,22.5
+KL-16645,Ken Lonsdale,Consumer,12,113.0,14175.22,806.84,5.69,20.0
+AH-10210,Alan Hwang,Consumer,9,53.0,4805.35,1308.56,27.23,9.23
+FA-14230,Frank Atkinson,Corporate,7,58.0,2984.05,520.53,17.44,25.88
+JL-15505,Jeremy Lonsdale,Consumer,6,56.0,3173.87,591.7,18.64,7.06
+JD-16060,Julia Dunbar,Consumer,3,17.0,695.44,111.12,15.98,5.0
+GT-14755,Guy Thornton,Consumer,4,23.0,226.43,-6.14,-2.71,20.0
+MK-18160,Mike Kennedy,Consumer,4,43.0,1031.6,227.85,22.09,8.18
+PO-19180,Philisse Overcash,Home Office,9,65.0,4893.05,1155.45,23.61,10.56
+MH-17785,Maya Herman,Corporate,7,42.0,2203.78,238.56,10.83,7.27
+MY-17380,Maribeth Yedwab,Corporate,7,49.0,2254.29,319.14,14.16,30.77
+AP-10915,Arthur Prichep,Consumer,10,102.0,3323.55,579.28,17.43,9.35
+AJ-10795,Anthony Johnson,Corporate,7,88.0,4501.38,1158.71,25.74,8.33
+LT-17110,Liz Thompson,Consumer,8,63.0,2936.25,320.98,10.93,24.64
+EL-13735,Ed Ludwig,Home Office,2,9.0,124.28,27.11,21.81,0.0
+RP-19270,Rachel Payne,Corporate,4,47.0,954.64,59.52,6.23,19.33
+KH-16360,Katherine Hughes,Consumer,6,40.0,3100.6,528.19,17.04,15.0
+TZ-21580,Tracy Zic,Consumer,4,30.0,1707.28,224.89,13.17,8.89
+MO-17500,Mary O'Rourke,Consumer,4,15.0,922.49,59.36,6.43,22.0
+MG-17650,Matthew Grinstein,Home Office,7,57.0,3785.28,341.91,9.03,12.86
+DW-13540,Don Weiss,Consumer,5,21.0,344.08,69.66,20.25,17.78
+DL-13495,Dionis Lloyd,Corporate,8,33.0,3539.32,-52.79,-1.49,5.0
+AP-10720,Anne Pryor,Home Office,8,85.0,1638.55,285.8,17.44,16.32
+CP-12085,Cathy Prescott,Corporate,8,57.0,5402.25,427.03,7.9,14.29
+JR-15670,Jim Radford,Consumer,2,14.0,1156.66,-785.16,-67.88,30.0
+LB-16735,Larry Blacks,Consumer,3,12.0,50.19,18.65,37.16,26.67
+JW-16075,Julia West,Consumer,4,38.0,1428.73,154.06,10.78,32.86
+TH-21100,Thea Hendricks,Consumer,5,29.0,2422.83,-135.22,-5.58,17.14
+RB-19645,Robert Barroso,Corporate,5,29.0,221.09,72.68,32.87,14.29
+HZ-14950,Henia Zydlo,Consumer,5,21.0,886.52,-130.39,-14.71,20.0
+GW-14605,Giulietta Weimer,Consumer,7,43.0,2189.02,-268.55,-12.27,15.56
+EH-13765,Edward Hooks,Corporate,12,120.0,10310.87,1393.49,13.51,7.19
+SC-20230,Scot Coram,Corporate,4,49.0,4371.96,440.14,10.07,10.91
+SC-20800,Stuart Calhoun,Consumer,4,11.0,279.25,51.83,18.56,12.0
+MC-17590,Matt Collister,Corporate,6,47.0,2426.06,288.99,11.91,17.06
+BS-11665,Brian Stugart,Consumer,3,47.0,3288.12,238.73,7.26,18.18
+IL-15100,Ivan Liston,Consumer,7,60.0,5040.74,1121.93,22.26,7.14
+SV-20935,Susan Vittorini,Consumer,8,66.0,1903.49,106.9,5.62,23.08
+CR-12580,Clay Rozendal,Home Office,4,32.0,2148.85,74.39,3.46,13.33
+SC-20575,Sonia Cooley,Consumer,5,30.0,902.73,100.23,11.1,34.29
+NB-18580,Nicole Brennan,Corporate,2,7.0,273.87,24.79,9.05,10.0
+JF-15295,Jason Fortune-,Consumer,5,42.0,955.12,97.29,10.19,11.43
+DF-13135,David Flashing,Consumer,3,23.0,2390.54,-259.31,-10.85,28.33
+FH-14350,Fred Harton,Consumer,4,52.0,2271.29,706.28,31.1,10.71
+DR-12940,Daniel Raglin,Home Office,8,57.0,8350.87,2869.07,34.36,15.38
+CA-11965,Carol Adams,Corporate,6,29.0,3789.72,1143.39,30.17,11.2
+DM-13345,Denise Monton,Corporate,8,41.0,4074.47,1319.07,32.37,10.0
+BF-11275,Beth Fritzler,Corporate,3,11.0,791.99,25.88,3.27,15.0
+EM-14140,Eugene Moren,Home Office,6,74.0,4588.44,1319.36,28.75,6.67
+TC-21475,Tony Chapman,Home Office,9,45.0,1244.98,119.1,9.57,26.36
+RD-19930,Russell D'Ascenzo,Consumer,4,33.0,970.95,35.04,3.61,31.0
+PF-19120,Peter Fuller,Consumer,4,75.0,9062.86,-614.3,-6.78,12.11
+NF-18475,Neil Französisch,Home Office,4,13.0,377.17,85.92,22.78,25.0
+SS-20410,Shahid Shariari,Consumer,6,46.0,3056.81,-1010.97,-33.07,25.83
+JS-15685,Jim Sink,Corporate,4,42.0,1131.07,-54.87,-4.85,20.91
+PN-18775,Parhena Norris,Home Office,8,47.0,1467.16,192.04,13.09,12.31
+TS-21610,Troy Staebel,Consumer,7,44.0,2820.42,-294.7,-10.45,37.27
+LC-16885,Lena Creighton,Consumer,12,93.0,7663.13,1288.35,16.81,15.65
+JE-16165,Justin Ellison,Corporate,3,34.0,2697.25,789.65,29.28,2.86
+TW-21025,Tamara Willingham,Home Office,7,57.0,5278.82,737.38,13.97,10.0
+JB-15925,Joni Blumstein,Consumer,3,32.0,900.55,-286.98,-31.87,30.0
+BP-11095,Bart Pistole,Corporate,12,70.0,2442.05,433.96,17.77,16.5
+VP-21730,Victor Preis,Home Office,3,18.0,993.9,205.39,20.67,4.0
+SA-20830,Sue Ann Reed,Consumer,10,75.0,4767.34,610.13,12.8,19.29
+LS-17245,Lynn Smith,Consumer,6,47.0,1008.14,348.36,34.55,8.33
+BD-11605,Brian Dahlen,Consumer,7,74.0,3288.48,634.83,19.3,7.25
+KB-16240,Karen Bern,Corporate,7,34.0,3152.61,763.92,24.23,15.0
+BD-11500,Bradley Drucker,Consumer,6,49.0,4411.25,1142.12,25.89,13.5
+OT-18730,Olvera Toch,Consumer,5,51.0,3818.62,-925.13,-24.23,16.0
+EB-13840,Ellis Ballard,Corporate,5,41.0,4358.13,656.2,15.06,12.5
+TP-21130,Theone Pippenger,Consumer,9,55.0,4454.06,1129.13,25.35,8.75
+CK-12205,Chloris Kastensmidt,Consumer,13,122.0,3154.82,141.25,4.48,23.44
+DC-13285,Debra Catini,Consumer,5,37.0,1174.62,132.07,11.24,7.86
+BM-11650,Brian Moss,Corporate,11,95.0,7294.18,2199.28,30.15,8.45
+AF-10885,Art Foster,Consumer,4,37.0,861.56,-163.13,-18.93,25.71
+HR-14770,Hallie Redmond,Home Office,5,38.0,1299.29,185.58,14.28,4.62
+DE-13255,Deanra Eno,Home Office,5,38.0,2550.87,464.48,18.21,11.11
+AB-10600,Ann Blume,Corporate,4,38.0,1515.86,-274.95,-18.14,37.5
+PW-19030,Pauline Webber,Corporate,10,48.0,3454.91,803.82,23.27,3.85
+KN-16390,Katherine Nockton,Corporate,9,56.0,2617.29,-151.15,-5.78,21.76
+PL-18925,Paul Lucas,Home Office,5,29.0,239.49,-0.77,-0.32,25.0
+HH-15010,Hilary Holden,Corporate,2,20.0,218.67,86.73,39.66,3.33
+ND-18460,Neil Ducich,Corporate,6,36.0,2893.46,443.34,15.32,8.75
+EH-13990,Erica Hackney,Consumer,6,20.0,825.95,150.37,18.21,6.25
+AM-10705,Anne McFarland,Consumer,8,81.0,5664.02,1085.75,19.17,6.36
+TB-21250,Tim Brockman,Consumer,7,74.0,1602.37,260.6,16.26,24.74
+SV-20785,Stewart Visinsky,Consumer,9,91.0,4105.31,485.03,11.81,18.4
+AH-10465,Amy Hunt,Consumer,5,35.0,2495.4,-196.13,-7.86,14.0
+TS-21430,Tom Stivers,Corporate,5,31.0,2054.14,48.7,2.37,15.71
+DB-13360,Dennis Bolton,Home Office,5,28.0,1081.47,291.01,26.91,8.33
+DV-13045,Darrin Van Huff,Corporate,5,28.0,1119.48,-427.18,-38.16,17.22
+SN-20710,Steve Nguyen,Home Office,7,89.0,3127.97,481.75,15.4,11.68
+ES-14080,Erin Smith,Corporate,9,77.0,4657.93,246.67,5.3,26.0
+CL-12565,Clay Ludtke,Consumer,12,106.0,10880.56,1933.76,17.77,11.43
+RC-19960,Ryan Crowe,Consumer,6,44.0,885.75,10.54,1.19,17.27
+RM-19675,Robert Marley,Home Office,5,39.0,5979.09,1902.55,31.82,4.55
+FM-14290,Frank Merwin,Home Office,9,79.0,3736.2,198.11,5.3,18.0
+Dl-13600,Dorris liebe,Corporate,5,19.0,755.6,175.23,23.19,21.67
+KL-16555,Kelly Lampkin,Corporate,8,84.0,5016.47,-182.79,-3.64,29.55
+TS-21205,Thomas Seio,Corporate,7,67.0,5371.11,862.9,16.07,15.79
+AB-10060,Adam Bellavance,Home Office,8,56.0,7755.63,2054.6,26.49,4.44
+BB-11545,Brenda Bowman,Corporate,9,83.0,6765.73,1015.06,15.0,19.5
+BN-11515,Bradley Nguyen,Consumer,5,79.0,1459.34,340.72,23.35,2.35
+LM-17065,Liz MacKendrick,Consumer,5,32.0,1346.78,-44.88,-3.33,5.71
+BD-11725,Bruce Degenhardt,Consumer,6,29.0,1526.5,333.99,21.88,2.0
+SC-20305,Sean Christensen,Consumer,7,64.0,3979.06,229.15,5.76,21.67
+EH-14125,Eugene Hildebrand,Home Office,10,76.0,3082.64,96.27,3.12,20.56
+RP-19390,Resi Pölking,Consumer,12,88.0,5153.06,465.25,9.03,14.8
+RB-19570,Rob Beeghly,Consumer,5,35.0,528.53,76.89,14.55,16.67
+RD-19810,Ross DeVincentis,Home Office,8,63.0,1137.61,318.46,27.99,18.75
+PB-19105,Peter Bühler,Consumer,4,18.0,688.33,218.16,31.69,12.0
+JK-15730,Joe Kamberova,Consumer,10,88.0,4867.21,55.05,1.13,33.25
+GB-14530,George Bell,Corporate,11,62.0,1568.44,7.85,0.5,17.0
+KC-16255,Karen Carlisle,Corporate,6,40.0,2120.95,846.12,39.89,2.0
+JA-15970,Joseph Airdo,Consumer,8,87.0,6491.02,-819.41,-12.62,21.25
+DL-12925,Daniel Lacy,Consumer,6,43.0,3272.2,4.21,0.13,3.57
+BT-11530,Bradley Talbott,Home Office,5,44.0,2684.5,409.49,15.25,10.0
+BF-11170,Ben Ferrer,Home Office,11,102.0,5907.97,1538.22,26.04,12.22
+NP-18700,Nora Preis,Consumer,7,63.0,7903.18,631.23,7.99,19.62
+SV-20815,Stuart Van,Corporate,4,24.0,1271.09,199.64,15.71,20.0
+MS-17770,Maxwell Schwartz,Consumer,9,73.0,3144.67,280.86,8.93,10.0
+JW-15220,Jane Waco,Corporate,6,66.0,7721.71,2173.7,28.15,7.14
+HF-14995,Herbert Flentye,Consumer,7,70.0,2533.15,-13.87,-0.55,13.16
+BE-11455,Brad Eason,Home Office,6,40.0,1727.65,139.2,8.06,14.62
+ME-18010,Michelle Ellison,Corporate,4,15.0,1256.95,107.35,8.54,16.67
+AC-10450,Amy Cox,Consumer,7,43.0,5527.85,1366.01,24.71,18.89
+KF-16285,Karen Ferguson,Home Office,7,67.0,10604.26,1660.12,15.66,3.33
+SM-20320,Sean Miller,Home Office,5,50.0,25043.07,-1980.75,-7.91,24.67
+JK-15625,Jim Karlsson,Consumer,7,44.0,3760.03,750.94,19.97,11.67
+KN-16705,Kristina Nunn,Home Office,8,55.0,2280.58,329.76,14.46,12.0
+AZ-10750,Annie Zypern,Consumer,6,40.0,1622.03,154.96,9.55,12.5
+KN-16450,Kean Nguyen,Corporate,5,49.0,2171.97,114.3,5.26,28.13
+BE-11410,Bobby Elias,Consumer,5,19.0,2261.44,755.91,33.43,16.0
+SC-20680,Steve Carroll,Home Office,6,26.0,1254.64,370.17,29.5,0.0
+Dp-13240,Dean percer,Home Office,11,99.0,7198.77,333.37,4.63,18.62
+CS-11845,Cari Sayre,Corporate,5,22.0,1278.96,185.37,14.49,27.5
+BG-11740,Bruce Geld,Consumer,6,22.0,1006.35,119.35,11.86,14.29
+PR-18880,Patrick Ryan,Consumer,5,43.0,1840.18,247.61,13.46,11.67
+MG-17695,Maureen Gnade,Consumer,3,23.0,1342.29,-398.8,-29.71,25.71
+AH-10585,Angele Hood,Consumer,4,17.0,738.5,83.97,11.37,12.0
+GR-14560,Georgia Rosenberg,Corporate,2,23.0,1284.38,359.83,28.02,0.0
+LR-17035,Lisa Ryan,Corporate,5,44.0,1879.29,-382.8,-20.37,27.5
+JM-15580,Jill Matthias,Consumer,5,26.0,303.94,113.12,37.22,11.43
+MH-17290,Marc Harrigan,Home Office,6,55.0,2394.01,28.76,1.2,18.85
+AO-10810,Anthony O'Donnell,Corporate,1,2.0,161.28,12.1,7.5,20.0
+SC-20845,Sung Chung,Consumer,2,13.0,280.63,31.17,11.11,20.0
+SC-20725,Steven Cartwright,Consumer,11,133.0,5226.2,1276.64,24.43,15.0
+SP-20650,Stephanie Phelps,Corporate,9,71.0,1872.43,268.47,14.34,15.33
+VM-21685,Valerie Mitchum,Home Office,7,37.0,2454.87,513.54,20.92,10.0
+JL-15850,John Lucas,Consumer,6,38.0,2725.25,779.89,28.62,23.64
+CC-12145,Charles Crestani,Consumer,7,31.0,2471.65,392.29,15.87,8.18
+JL-15835,John Lee,Consumer,11,143.0,9799.93,228.9,2.34,8.82
+NP-18325,Naresj Patel,Consumer,6,77.0,5529.62,1208.9,21.86,5.71
+AB-10165,Alan Barnes,Consumer,8,48.0,1113.85,220.82,19.82,13.57
+RS-19765,Roland Schwarz,Corporate,8,54.0,4159.77,1206.39,29.0,11.43
+EG-13900,Emily Grady,Consumer,5,44.0,1832.02,104.26,5.69,20.0
+YC-21895,Yoseph Carroll,Corporate,5,31.0,5454.35,1305.62,23.94,7.5
+DL-12865,Dan Lawera,Consumer,8,51.0,1503.12,322.24,21.44,15.0
+LL-16840,Lauren Leatherbury,Consumer,6,50.0,2741.2,560.02,20.43,1.67
+JS-15595,Jill Stevenson,Corporate,4,35.0,1417.65,-175.56,-12.38,31.25
+SE-20110,Sanjit Engle,Consumer,11,78.0,12209.44,2650.67,21.71,11.05
+RD-19660,Robert Dilbeck,Home Office,5,23.0,2786.63,835.77,29.99,8.0
+CY-12745,Craig Yedwab,Corporate,8,43.0,2900.02,60.64,2.09,20.0
+CS-12355,Christine Sundaresam,Consumer,11,74.0,3202.16,831.93,25.98,8.18
+CA-12055,Cathy Armstrong,Home Office,5,49.0,1679.72,211.26,12.58,30.0
+HR-14830,Harold Ryan,Corporate,7,51.0,5248.79,1196.95,22.8,10.0
+TB-21355,Todd Boyes,Corporate,5,44.0,834.33,268.96,32.24,6.15
+EB-14170,Evan Bailliet,Consumer,6,20.0,1186.33,282.17,23.79,22.86
+NP-18685,Nora Pelletier,Home Office,6,23.0,1228.7,514.5,41.87,18.57
+DP-13390,Dennis Pardue,Home Office,9,50.0,5480.73,1571.83,28.68,18.57
+JG-15160,James Galang,Consumer,11,70.0,6366.4,1415.67,22.24,11.11
+NW-18400,Natalie Webber,Consumer,7,78.0,7234.02,1023.13,14.14,21.36
+MM-18055,Michelle Moray,Consumer,8,73.0,2749.86,-520.36,-18.92,21.05
+JE-15610,Jim Epp,Corporate,7,74.0,7754.97,1623.41,20.93,16.0
+BF-10975,Barbara Fisher,Corporate,7,38.0,599.79,227.44,37.92,14.62
+JC-15775,John Castell,Consumer,9,64.0,2772.06,279.58,10.09,12.19
+RB-19435,Richard Bierner,Consumer,8,66.0,2663.07,477.23,17.92,16.25
+ML-17410,Maris LaWare,Consumer,6,51.0,2921.51,-76.18,-2.61,16.67
+TG-21310,Toby Gnade,Consumer,5,30.0,3058.38,682.17,22.3,21.11
+MW-18220,Mitch Webber,Consumer,7,51.0,5341.9,1238.42,23.18,7.86
+BC-11125,Becky Castell,Home Office,9,60.0,2933.67,251.61,8.58,11.11
+DB-12910,Daniel Byrd,Home Office,8,47.0,2171.61,431.38,19.86,15.42
+VF-21715,Vicky Freymann,Home Office,5,35.0,847.95,-96.28,-11.35,6.36
+EH-14185,Evan Henry,Consumer,6,22.0,923.88,242.12,26.21,28.75
+SC-20020,Sam Craven,Consumer,5,62.0,3362.96,-317.05,-9.43,21.88
+NC-18535,Nick Crebassa,Corporate,7,64.0,8241.73,1314.77,15.95,13.67
+KE-16420,Katrina Edelman,Corporate,8,67.0,1686.73,397.89,23.59,21.47
+AR-10345,Alex Russell,Corporate,4,18.0,1055.69,-221.05,-20.94,26.0
+FC-14245,Frank Carlisle,Home Office,7,50.0,3418.74,1217.18,35.6,13.57
+VP-21760,Victoria Pisteka,Corporate,7,65.0,3360.54,-1018.76,-30.32,17.14
+LC-16960,Lindsay Castell,Home Office,4,30.0,3246.63,299.47,9.22,28.57
+AD-10180,Alan Dominguez,Home Office,8,40.0,6106.88,1869.92,30.62,5.83
+JD-15895,Jonathan Doherty,Corporate,11,150.0,7610.87,1050.26,13.8,7.5
+SG-20080,Sandra Glassco,Consumer,3,30.0,3406.58,570.44,16.75,6.82
+DK-13150,David Kendrick,Corporate,2,20.0,797.83,249.94,31.33,12.0
+MP-17470,Mark Packer,Home Office,7,77.0,3206.12,600.29,18.72,12.14
+MZ-17515,Mary Zewe,Corporate,6,39.0,2564.89,787.74,30.71,28.0
+MB-17305,Maria Bertelson,Consumer,10,63.0,1548.71,212.43,13.72,17.37
+DW-13480,Dianna Wilson,Home Office,5,38.0,5271.63,1348.75,25.59,3.64
+BB-10990,Barry Blumstein,Corporate,5,26.0,744.33,11.57,1.55,20.0
+MM-18280,Muhammed MacIntyre,Corporate,9,32.0,775.41,58.89,7.59,14.17
+TN-21040,Tanja Norvell,Home Office,7,48.0,3130.22,-692.05,-22.11,20.0
+JC-15340,Jasper Cacioppo,Consumer,4,12.0,71.27,-0.35,-0.49,22.5
+RL-19615,Rob Lucas,Consumer,8,101.0,6234.91,488.15,7.83,21.88
+FP-14320,Frank Preis,Consumer,8,54.0,4046.75,406.46,10.04,13.57
+NB-18655,Nona Balk,Corporate,9,64.0,1972.61,117.64,5.96,17.35
+ME-17725,Max Engle,Consumer,8,46.0,1908.45,77.81,4.08,22.46
+CD-11980,Carol Darley,Consumer,3,22.0,639.76,-206.72,-32.31,43.33
+MC-17845,Michael Chen,Consumer,7,45.0,3805.71,698.42,18.35,10.0
+JO-15550,Jesus Ocampo,Home Office,5,42.0,1090.85,167.68,15.37,23.64
+MR-17545,Mathew Reese,Home Office,4,29.0,639.18,162.93,25.49,20.0
+RH-19495,Rick Hansen,Consumer,5,38.0,3621.38,563.78,15.57,10.0
+MC-18130,Mike Caudle,Corporate,5,34.0,1581.99,121.74,7.7,5.45
+PG-18820,Patrick Gardner,Consumer,13,83.0,3086.89,137.45,4.45,16.92
+AJ-10780,Anthony Jacobs,Corporate,7,62.0,4867.34,150.72,3.1,8.67
+PC-18745,Pamela Coakley,Corporate,4,22.0,1832.07,272.68,14.88,22.0
+RW-19630,Rob Williams,Corporate,9,53.0,3279.75,698.85,21.31,13.75
+RK-19300,Ralph Kennedy,Consumer,3,29.0,1460.19,269.68,18.47,7.5
+MT-17815,Meg Tillman,Consumer,6,31.0,2890.14,509.01,17.61,13.0
+NF-18595,Nicole Fjeld,Home Office,7,55.0,2031.48,388.2,19.11,11.67
+SN-20560,Skye Norling,Home Office,6,67.0,1860.42,-716.86,-38.53,17.33
+LT-16765,Larry Tron,Consumer,3,8.0,329.87,59.04,17.9,13.33
+BD-11770,Bryan Davis,Consumer,6,21.0,658.46,141.28,21.46,12.0
+CS-12460,Chuck Sachs,Consumer,2,13.0,550.64,156.26,28.38,6.67
+GZ-14545,George Zrebassa,Corporate,4,25.0,2454.62,828.66,33.76,4.0
+LD-17005,Lisa DeCherney,Consumer,4,25.0,1961.93,557.15,28.4,2.86
+PP-18955,Paul Prost,Home Office,10,138.0,7252.61,1495.11,20.61,10.88
+CM-12655,Corinna Mitchell,Home Office,6,42.0,6339.56,1572.44,24.8,7.2
+PC-19000,Pauline Chand,Home Office,2,18.0,1061.49,-184.34,-17.37,13.33
+JM-15655,Jim Mitchum,Corporate,5,41.0,864.95,117.2,13.55,15.83
+DB-13270,Deborah Brumfield,Home Office,8,52.0,4655.89,841.83,18.08,20.77
+AB-10150,Aimee Bixby,Consumer,5,37.0,966.71,313.66,32.45,13.33
+PB-19210,Phillip Breyer,Corporate,2,10.0,132.74,21.9,16.5,10.0
+NC-18625,Noah Childs,Corporate,5,29.0,1821.75,-359.02,-19.71,24.44
+CB-12415,Christy Brittain,Consumer,8,44.0,1949.21,272.4,13.97,33.33
+LW-17215,Luke Weiss,Consumer,7,59.0,5420.52,837.24,15.45,16.67
+TB-21625,Trudy Brown,Consumer,9,60.0,2797.68,379.88,13.58,14.0
+MZ-17335,Maria Zettner,Home Office,4,11.0,593.61,85.02,14.32,6.67
+KD-16615,Ken Dana,Corporate,5,56.0,2243.51,539.72,24.06,10.77
+CM-12235,Chris McAfee,Consumer,5,28.0,2305.71,365.03,15.83,7.5
+SW-20350,Sean Wendt,Home Office,3,25.0,1019.04,95.84,9.4,21.67
+PT-19090,Pete Takahito,Consumer,4,19.0,160.58,-20.05,-12.49,37.14
+AH-10030,Aaron Hawkins,Corporate,7,54.0,1744.7,365.22,20.93,9.09
+DB-12970,Darren Budd,Corporate,5,43.0,2839.23,213.01,7.5,16.57
+TP-21565,Tracy Poddar,Corporate,4,48.0,1936.62,139.22,7.19,24.0
+KS-16300,Karen Seio,Corporate,3,10.0,88.47,0.11,0.12,27.5
+DO-13645,Doug O'Connell,Consumer,7,36.0,1267.32,294.07,23.2,9.09
+HE-14800,Harold Engle,Corporate,4,44.0,883.53,274.4,31.06,1.82
+EH-13945,Eric Hoffmann,Consumer,8,72.0,684.18,53.54,7.83,29.41
+LH-16900,Lena Hernandez,Consumer,9,64.0,2295.32,526.07,22.92,12.67
+JM-15265,Janet Molinari,Corporate,5,52.0,1804.14,502.63,27.86,13.85
+DN-13690,Duane Noonan,Consumer,7,41.0,2139.79,540.53,25.26,1.82
+GM-14455,Gary Mitchum,Home Office,6,54.0,3078.63,793.28,25.77,16.67
+LC-16870,Lena Cacioppo,Consumer,8,113.0,2580.71,-188.26,-7.29,24.0
+PA-19060,Pete Armstrong,Home Office,6,27.0,729.41,225.86,30.96,18.57
+JK-15640,Jim Kriz,Home Office,9,41.0,4760.44,1172.53,24.63,10.0
+DR-12880,Dan Reichenbach,Corporate,9,103.0,6528.03,1641.85,25.15,13.33
+SH-20395,Shahid Hopkins,Consumer,10,45.0,2180.7,-144.52,-6.63,23.33
+AG-10525,Andy Gerbode,Corporate,4,33.0,1455.04,-152.75,-10.5,15.56
+GK-14620,Grace Kelly,Corporate,9,66.0,6497.28,1448.56,22.29,15.71
+AS-10285,Alejandro Savely,Corporate,6,39.0,3214.24,354.63,11.03,22.5
+JG-15805,John Grady,Corporate,6,46.0,1507.02,206.1,13.68,6.67
+EP-13915,Emily Phan,Consumer,17,124.0,5478.06,144.93,2.65,19.74
+CA-12775,Cynthia Arntzen,Consumer,7,72.0,3041.56,204.49,6.72,18.82
+GT-14635,Grant Thornton,Corporate,3,26.0,9351.2,-4108.66,-43.94,25.0
+RA-19285,Ralph Arnett,Consumer,9,58.0,2617.89,546.08,20.86,16.47
+JF-15355,Jay Fein,Consumer,6,58.0,1911.84,330.2,17.27,7.5
+GH-14665,Greg Hansen,Consumer,2,9.0,146.94,-5.81,-3.95,24.0
+BS-11800,Bryan Spruell,Home Office,2,22.0,949.43,194.05,20.44,0.0
+SL-20155,Sara Luxemburg,Home Office,7,30.0,3053.01,527.98,17.29,17.78
+BT-11485,Brad Thomas,Home Office,2,11.0,415.2,126.87,30.56,6.67
+NC-18340,Nat Carroll,Consumer,5,54.0,2461.41,580.3,23.58,4.12
+TC-21535,Tracy Collins,Home Office,7,28.0,742.55,217.95,29.35,11.0
+Co-12640,Corey-Lock,Consumer,5,30.0,1300.08,205.63,15.82,17.5
+JD-15790,John Dryer,Consumer,5,26.0,2152.35,-266.57,-12.39,17.14
+GH-14425,Gary Hwang,Consumer,4,51.0,4172.84,1176.41,28.19,19.0
+ML-17395,Marina Lichtenstein,Corporate,9,72.0,2722.84,684.93,25.15,17.25
+TB-21280,Toby Braunhardt,Consumer,6,35.0,2198.46,490.96,22.33,10.0
+EB-13930,Eric Barreto,Consumer,5,24.0,944.6,0.61,0.06,17.14
+JF-15565,Jill Fjeld,Consumer,8,67.0,4198.32,1073.19,25.56,17.5
+TC-20980,Tamara Chand,Corporate,5,42.0,19052.22,8981.32,47.14,11.67
+MM-17260,Magdelene Morse,Consumer,4,17.0,1314.02,178.41,13.58,13.33
+LO-17170,Lori Olson,Corporate,5,34.0,644.35,150.16,23.3,25.56
+BO-11350,Bill Overfelt,Corporate,5,43.0,2682.73,278.78,10.39,23.33
+AC-10660,Anna Chung,Consumer,5,16.0,657.31,-28.7,-4.37,18.33
+SR-20425,Sharelle Roach,Home Office,5,34.0,3233.47,-3333.91,-103.11,36.67
+CR-12820,Cyra Reiten,Home Office,3,26.0,1397.88,83.27,5.96,13.14
+AG-10330,Alex Grayson,Consumer,5,47.0,660.97,-5.14,-0.78,23.33
+SB-20185,Sarah Brown,Consumer,6,45.0,6411.0,885.47,13.81,14.17
+EM-14200,Evan Minnotte,Home Office,3,13.0,366.83,21.78,5.94,12.5
+SS-20515,Shirley Schmidt,Home Office,3,36.0,613.4,199.93,32.59,0.0
+AR-10570,Anemone Ratner,Consumer,1,6.0,88.15,32.63,37.02,0.0
+HD-14785,Harold Dahlen,Home Office,3,31.0,251.36,-135.89,-54.06,30.0
+TB-21055,Ted Butterfield,Consumer,5,66.0,1467.89,390.22,26.58,5.56
+PS-18970,Paul Stevenson,Home Office,8,52.0,1278.65,198.53,15.53,5.38
+RB-19705,Roger Barcio,Home Office,4,22.0,2067.45,243.08,11.76,15.71
+EM-13960,Eric Murdock,Consumer,5,18.0,933.7,102.3,10.96,23.33
+VD-21670,Valerie Dominguez,Consumer,6,71.0,6442.26,1617.8,25.11,7.5
+LH-17155,Logan Haushalter,Consumer,9,44.0,1739.69,316.54,18.2,7.89
+SB-20290,Sean Braxton,Corporate,7,84.0,8057.89,-2082.76,-25.85,24.12
+CB-12535,Claudia Bergmann,Corporate,8,74.0,4246.46,1049.55,24.72,5.0
+AH-10195,Alan Haines,Corporate,4,28.0,1587.45,-378.54,-23.85,35.0
+CR-12625,Corey Roper,Home Office,3,14.0,475.9,144.76,30.42,0.0
+AR-10405,Allen Rosenblatt,Corporate,5,29.0,2236.12,-98.76,-4.42,10.0
+SS-20140,Saphhira Shifley,Corporate,8,86.0,1324.03,332.33,25.1,11.43
+SC-20095,Sanjit Chand,Consumer,9,87.0,14142.34,5757.42,40.71,6.36
+XP-21865,Xylona Preis,Consumer,11,100.0,2374.66,621.22,26.16,4.64
+MT-18070,Michelle Tran,Home Office,4,44.0,1319.43,-23.67,-1.79,24.27
+MC-17605,Matt Connell,Corporate,8,60.0,2258.2,195.45,8.66,22.22
+MS-17830,Melanie Seite,Consumer,4,14.0,370.34,19.43,5.25,18.0
+CA-12265,Christina Anderson,Consumer,9,65.0,2648.29,279.62,10.56,18.94
+SP-20545,Sibella Parks,Corporate,6,43.0,1306.09,-118.77,-9.09,26.0
+DJ-13630,Doug Jacobs,Consumer,3,43.0,3356.4,731.57,21.8,6.25
+BN-11470,Brad Norvell,Corporate,4,15.0,265.31,36.61,13.8,16.67
+DP-13165,David Philippe,Consumer,2,20.0,1058.62,-40.94,-3.87,15.0
+EM-14095,Eudokia Martin,Corporate,4,34.0,1041.04,240.23,23.08,10.0
+CM-12445,Chuck Magee,Consumer,3,32.0,288.0,64.43,22.37,7.78
+CG-12040,Catherine Glotzbach,Home Office,6,37.0,904.48,86.51,9.56,18.89
+SP-20620,Stefania Perrino,Corporate,9,77.0,5440.32,-270.43,-4.97,25.0
+GM-14500,Gene McClure,Consumer,10,53.0,1255.68,441.32,35.15,11.54
+BT-11305,Beth Thompson,Home Office,5,33.0,2567.66,417.58,16.26,4.44
+AW-10930,Arthur Wiediger,Home Office,7,68.0,2852.95,-104.54,-3.66,30.62
+DK-13375,Dennis Kane,Consumer,8,77.0,3318.49,377.05,11.36,10.87
+JM-16195,Justin MacKendrick,Consumer,10,74.0,2833.92,754.12,26.61,6.32
+SC-20260,Scott Cohen,Corporate,8,63.0,3729.8,671.0,17.99,19.72
+TT-21265,Tim Taslimi,Corporate,3,8.0,439.5,93.92,21.37,0.0
+MS-17530,MaryBeth Skach,Consumer,4,21.0,475.66,84.02,17.66,15.71
+RH-19555,Ritsa Hightower,Consumer,2,11.0,740.39,0.31,0.04,53.33
+JP-16135,Julie Prescott,Home Office,9,47.0,1707.71,309.71,18.14,15.38
+DL-13330,Denise Leinenbach,Consumer,4,32.0,585.02,222.69,38.07,5.0
+EJ-13720,Ed Jacobs,Consumer,4,31.0,2162.18,387.02,17.9,17.5
+LS-17230,Lycoris Saunders,Consumer,3,16.0,368.88,39.19,10.62,11.67
+MF-18250,Monica Federle,Corporate,5,38.0,1758.3,456.85,25.98,6.67
+DM-13525,Don Miller,Corporate,3,33.0,1376.8,199.78,14.51,17.0
+MG-18205,Mitch Gastineau,Corporate,1,8.0,16.74,-1.24,-7.41,45.0
+RE-19405,Ricardo Emerson,Consumer,1,5.0,48.36,6.04,12.49,20.0
+SO-20335,Sean O'Donnell,Consumer,6,52.0,2602.58,-81.08,-3.12,13.67
+PK-19075,Pete Kriz,Consumer,12,107.0,8646.93,2038.26,23.57,7.6
+GH-14485,Gene Hale,Corporate,2,15.0,1361.24,-95.45,-7.01,46.67
+RA-19885,Ruben Ausman,Corporate,7,53.0,3832.32,1292.87,33.74,4.0
+ON-18715,Odella Nelson,Corporate,9,58.0,1567.52,-5.88,-0.38,16.0
+GG-14650,Greg Guthrie,Corporate,9,92.0,2223.99,12.69,0.57,15.0
+SH-19975,Sally Hughsby,Corporate,13,113.0,3406.86,558.44,16.39,13.62
+HA-14920,Helen Andreada,Consumer,8,72.0,2584.17,99.14,3.84,20.0
+NP-18670,Nora Paige,Consumer,5,46.0,3908.4,514.6,13.17,2.0
+FH-14365,Fred Hopkins,Corporate,8,52.0,6987.2,2050.28,29.34,13.85
+LE-16810,Laurel Elliston,Consumer,6,32.0,1469.45,161.75,11.01,25.56
+JH-15985,Joseph Holt,Consumer,6,64.0,7954.99,-644.71,-8.1,8.57
+VW-21775,Victoria Wilson,Corporate,10,77.0,6134.04,-874.66,-14.26,16.11
+JH-15910,Jonathan Howell,Consumer,7,35.0,959.48,-13.55,-1.41,14.44
+SP-20860,Sung Pak,Corporate,10,80.0,4282.92,566.71,13.23,20.83
+VB-21745,Victoria Brennan,Corporate,6,37.0,2005.59,371.25,18.51,17.0
+AG-10900,Arthur Gainer,Consumer,10,92.0,4510.79,343.67,7.62,16.67
+AG-10675,Anna Gayman,Consumer,7,54.0,3489.06,-246.4,-7.06,16.13
+LF-17185,Luke Foster,Consumer,7,69.0,3930.52,-3583.97,-91.18,31.87
+MP-17965,Michael Paige,Corporate,9,62.0,3983.65,638.16,16.02,25.5
+SD-20485,Shirley Daniels,Home Office,9,82.0,6121.1,1985.18,32.43,10.48
+AJ-10945,Ashley Jarboe,Consumer,7,40.0,1839.24,521.14,28.33,4.0
+JF-15490,Jeremy Farry,Consumer,11,36.0,1082.92,-18.05,-1.67,14.67
+CS-11950,Carlos Soltero,Consumer,11,68.0,3036.53,-126.41,-4.16,26.36
+FM-14380,Fred McMath,Consumer,9,53.0,2523.26,191.5,7.59,15.71
+RF-19735,Roland Fjeld,Consumer,7,53.0,2341.3,711.62,30.39,1.43
+BF-11020,Barry Französisch,Corporate,8,78.0,2888.5,302.01,10.46,25.71
+BV-11245,Benjamin Venier,Corporate,5,49.0,1523.28,315.23,20.69,9.29
+ES-14020,Erica Smith,Consumer,5,31.0,3510.46,1003.3,28.58,12.5
+JL-15175,James Lanier,Home Office,5,29.0,1571.52,209.28,13.32,21.43
+AH-10075,Adam Hart,Corporate,10,75.0,3250.35,281.2,8.65,13.5
+JS-15880,John Stevenson,Consumer,5,43.0,3868.01,564.97,14.61,14.67
+NS-18640,Noel Staavos,Corporate,13,113.0,2964.82,-234.76,-7.92,21.54
+FH-14275,Frank Hawley,Corporate,10,65.0,4256.28,1073.28,25.22,12.86
+SM-20950,Suzanne McNair,Corporate,12,94.0,5563.4,581.57,10.45,12.73
+LW-16825,Laurel Workman,Corporate,5,50.0,2238.05,32.57,1.46,20.67
+ND-18370,Natalie DeCherney,Consumer,9,63.0,4326.14,353.63,8.17,21.11
+RW-19540,Rick Wilson,Corporate,7,89.0,7397.4,1586.64,21.45,13.48
+MC-17425,Mark Cousins,Corporate,5,48.0,4432.14,1802.4,40.67,12.0
+BO-11425,Bobby Odegard,Consumer,2,7.0,130.83,59.45,45.44,0.0
+JW-15955,Joni Wasserman,Consumer,7,41.0,1244.09,-29.58,-2.38,8.18
+ML-17755,Max Ludwig,Home Office,7,53.0,2071.91,409.51,19.76,10.77
+RP-19855,Roy Phan,Corporate,8,61.0,2170.71,594.6,27.39,13.33
+SW-20245,Scot Wooten,Consumer,7,33.0,1085.06,-19.61,-1.81,26.0
+MV-17485,Mark Van Huff,Consumer,9,52.0,1560.03,189.01,12.12,24.0
+SG-20605,Speros Goranitis,Consumer,6,49.0,3124.84,463.27,14.83,9.23
+TC-21295,Toby Carlisle,Consumer,8,63.0,4266.81,606.38,14.21,13.12
+CC-12370,Christopher Conant,Consumer,5,34.0,12129.08,2177.05,17.95,28.18
+RB-19330,Randy Bradley,Consumer,2,16.0,1008.2,-164.41,-16.31,31.67
+VT-21700,Valerie Takahito,Home Office,2,42.0,1736.6,-224.09,-12.9,33.33
+JK-16090,Juliana Krohn,Consumer,3,43.0,3747.66,586.67,15.65,20.0
+KD-16270,Karen Daniels,Consumer,5,64.0,8282.36,1107.69,13.37,18.75
+CV-12805,Cynthia Voltz,Corporate,9,62.0,2370.33,98.98,4.18,24.32
+DW-13585,Dorothy Wardle,Corporate,7,44.0,1204.85,-266.9,-22.15,17.0
+CB-12025,Cassandra Brandow,Consumer,10,122.0,6076.14,150.21,2.47,16.35
+CC-12670,Craig Carreira,Consumer,7,47.0,2269.69,187.83,8.28,16.79
+NM-18445,Nathan Mautz,Home Office,7,44.0,6459.34,2751.69,42.6,4.29
+PO-18850,Patrick O'Brill,Consumer,11,91.0,7473.83,38.46,0.51,21.0
+CC-12550,Clay Cheatham,Consumer,3,14.0,113.84,33.87,29.75,15.0
+CW-11905,Carl Weiss,Home Office,6,40.0,1136.59,370.83,32.63,9.09
+GT-14710,Greg Tran,Consumer,11,106.0,11820.12,2163.42,18.3,10.0
+AS-10240,Alan Shonely,Consumer,7,39.0,584.62,33.72,5.77,26.92
+CK-12595,Clytie Kelty,Consumer,11,108.0,2372.75,497.68,20.97,18.4
+SR-20740,Steven Roelle,Home Office,8,50.0,4345.88,1990.42,45.8,3.33
+TH-21550,Tracy Hopkins,Home Office,7,44.0,4234.1,-571.98,-13.51,6.92
+GA-14725,Guy Armstrong,Consumer,11,79.0,1398.39,136.7,9.78,17.95
+SW-20275,Scott Williamson,Consumer,6,28.0,1966.65,332.86,16.93,2.86
+RD-19585,Rob Dowd,Consumer,10,73.0,2912.9,734.52,25.22,3.16
+CC-12100,Chad Cunningham,Home Office,6,46.0,1770.95,208.6,11.78,21.54
+SW-20755,Steven Ward,Corporate,2,27.0,758.69,68.23,8.99,10.0
+JF-15190,Jamie Frazer,Consumer,7,72.0,2279.59,575.11,25.23,12.11
+TS-21370,Todd Sumrall,Corporate,6,59.0,11891.75,2371.72,19.94,11.67
+VG-21805,Vivek Grady,Corporate,5,16.0,427.37,-52.33,-12.24,10.0
+JL-15235,Janet Lee,Consumer,5,39.0,2203.7,54.51,2.47,22.0
+DB-13660,Duane Benoit,Consumer,7,33.0,1155.21,177.66,15.38,16.0
+MH-17620,Matt Hagelstein,Corporate,4,19.0,1252.8,122.35,9.77,23.33
+BM-11575,Brendan Murry,Corporate,6,22.0,808.16,95.58,11.83,18.0
+ML-18040,Michelle Lonsdale,Corporate,3,18.0,742.08,138.71,18.69,25.0
+GM-14695,Greg Maxwell,Corporate,3,44.0,6049.96,188.72,3.12,5.45
+BD-11635,Brian Derr,Consumer,3,19.0,582.65,141.54,24.29,10.0
+MH-18025,Michelle Huthwaite,Consumer,5,31.0,2984.95,476.9,15.98,13.0
+DM-13015,Darrin Martin,Consumer,7,87.0,6345.09,1677.41,26.44,23.0
+HG-14845,Harry Greene,Consumer,5,31.0,785.62,147.01,18.71,19.0
+GB-14575,Giulietta Baptist,Consumer,5,63.0,4716.3,1135.84,24.08,3.75
+JP-15460,Jennifer Patt,Corporate,7,54.0,1669.12,429.73,25.75,14.0
+CS-12490,Cindy Schnelling,Corporate,4,33.0,1077.23,-302.86,-28.11,25.0
+DH-13075,Dave Hallsten,Corporate,6,81.0,4932.87,1193.74,24.2,7.83
+MH-17455,Mark Hamilton,Consumer,8,45.0,2456.18,484.78,19.74,16.36
+BW-11065,Barry Weirich,Consumer,3,8.0,385.51,-58.29,-15.12,13.33
+MH-17440,Mark Haberlin,Corporate,4,25.0,400.02,61.43,15.36,7.78
+CM-12715,Craig Molinari,Corporate,4,57.0,3984.45,176.32,4.43,30.92
+IM-15070,Irene Maddox,Consumer,7,93.0,4930.49,514.66,10.44,16.67
+ZD-21925,Zuschuss Donatelli,Consumer,5,32.0,1493.94,249.13,16.68,11.11
+CS-12400,Christopher Schild,Home Office,9,47.0,3651.86,-342.8,-9.39,21.43
+MJ-17740,Max Jones,Consumer,7,50.0,6320.75,1054.54,16.68,21.33
+DB-13615,Doug Bickford,Consumer,7,41.0,1989.05,438.8,22.06,14.55
+TD-20995,Tamara Dahlen,Consumer,9,67.0,1434.56,88.18,6.15,24.38
+LA-16780,Laura Armstrong,Corporate,11,105.0,8673.23,2059.11,23.74,11.54
+DK-13225,Dean Katz,Corporate,9,70.0,4802.39,209.9,4.37,19.47
+BD-11320,Bill Donatelli,Consumer,12,75.0,5718.53,1094.5,19.14,7.89
+MO-17800,Meg O'Connel,Home Office,8,49.0,1687.02,169.34,10.04,16.36
+CK-12325,Christine Kargatis,Home Office,5,46.0,2945.32,261.23,8.87,18.33
+CD-11920,Carlos Daly,Consumer,5,35.0,2033.97,426.64,20.98,4.44
+SC-20050,Sample Company A,Home Office,9,61.0,4624.57,1011.73,21.88,18.67
+MW-18235,Mitch Willingham,Corporate,2,13.0,5253.88,1665.52,31.7,6.67
+KM-16225,Kalyca Meade,Corporate,6,72.0,2260.95,635.11,28.09,2.11
+AG-10390,Allen Goldenen,Consumer,5,33.0,200.95,69.27,34.47,22.5
+JH-15430,Jennifer Halladay,Consumer,4,29.0,309.29,-24.06,-7.78,31.43
+DG-13300,Deirdre Greer,Corporate,5,39.0,3195.82,562.77,17.61,10.0
+TS-21160,Theresa Swint,Corporate,6,60.0,2163.63,260.88,12.06,22.35
+CM-12160,Charles McCrossin,Consumer,6,23.0,2533.32,-394.37,-15.57,24.29
+EH-14005,Erica Hernandez,Home Office,7,50.0,1219.52,-94.14,-7.72,17.27
+MS-17710,Maurice Satty,Consumer,6,48.0,1613.39,247.43,15.34,22.0
+CC-12220,Chris Cortes,Consumer,12,81.0,3913.43,393.96,10.07,11.82
+HG-14965,Henry Goldwyn,Corporate,12,68.0,3247.65,-2797.96,-86.15,17.06
+HA-14905,Helen Abelman,Consumer,7,45.0,2163.32,270.85,12.52,23.0
+DK-12835,Damala Kotsonis,Corporate,12,86.0,3256.48,881.12,27.06,17.78
+KD-16495,Keith Dawkins,Corporate,12,84.0,8181.24,3038.57,37.14,8.75
+IG-15085,Ivan Gibson,Consumer,4,19.0,744.57,320.49,43.04,2.86
+PS-18760,Pamela Stobb,Consumer,6,75.0,2181.47,-134.45,-6.16,22.38
+MD-17860,Michael Dominguez,Corporate,5,45.0,1204.91,-4.03,-0.33,28.75
+CT-11995,Carol Triggs,Consumer,8,60.0,3241.9,161.22,4.97,16.11
+DB-13555,Dorothy Badders,Corporate,7,61.0,3908.8,109.35,2.8,15.14
+DB-13405,Denny Blanton,Consumer,4,62.0,1711.69,438.92,25.64,2.86
+TP-21415,Tom Prescott,Consumer,5,39.0,5328.98,-1087.38,-20.41,46.2
+RR-19315,Ralph Ritter,Consumer,2,7.0,615.93,-73.83,-11.99,27.5
+TT-21220,Thomas Thornton,Consumer,8,55.0,1427.05,278.74,19.53,21.33
+EC-14050,Erin Creighton,Consumer,5,37.0,461.91,96.44,20.88,10.0
+CS-12175,Charles Sheldon,Corporate,5,30.0,844.46,113.14,13.4,16.25
+CS-11860,Cari Schnelling,Consumer,6,16.0,537.63,105.82,19.68,22.86
+ML-18265,Muhammed Lee,Consumer,2,7.0,162.23,42.67,26.3,6.67
+AA-10480,Andrew Allen,Consumer,4,36.0,1790.51,435.82,24.34,1.67
+AG-10270,Alejandro Grove,Consumer,5,58.0,2582.9,732.75,28.37,1.43
+HM-14980,Henry MacAllister,Consumer,4,29.0,736.28,117.27,15.93,17.14
+PF-19165,Philip Fox,Consumer,6,34.0,2770.0,196.88,7.11,5.0
+SK-19990,Sally Knutson,Consumer,3,19.0,883.41,168.79,19.11,22.0
+LC-17140,Logan Currie,Consumer,9,62.0,2633.57,231.12,8.78,18.42
+AS-10225,Alan Schoenberger,Corporate,5,41.0,4260.78,719.77,16.89,6.15
+BP-11185,Ben Peterman,Corporate,9,69.0,3675.86,363.59,9.89,19.44
+JG-15115,Jack Garza,Consumer,3,20.0,2358.66,684.2,29.01,24.29
+KH-16510,Keith Herrera,Consumer,7,91.0,5952.86,656.12,11.02,10.87
+JE-15475,Jeremy Ellison,Consumer,6,49.0,1388.69,276.24,19.89,18.46
+EM-14065,Erin Mull,Consumer,4,22.0,228.99,40.15,17.53,25.0
+RO-19780,Rose O'Brian,Consumer,7,48.0,3815.47,-1262.59,-33.09,29.17
+PH-18790,Patricia Hirasaki,Home Office,1,6.0,729.65,47.89,6.56,20.0
+MG-18145,Mike Gockenbach,Consumer,4,42.0,3061.54,-93.63,-3.06,18.75
+AS-10135,Adrian Shami,Home Office,2,9.0,58.82,21.84,37.13,6.67
+JK-15370,Jay Kimmel,Consumer,8,72.0,2709.62,330.29,12.19,12.35
+SS-20875,Sung Shariari,Consumer,5,39.0,964.63,-75.57,-7.83,24.0
+AS-10630,Ann Steele,Home Office,7,34.0,833.41,136.48,16.38,18.33
+JJ-15445,Jennifer Jackson,Consumer,5,25.0,709.17,200.56,28.28,6.67
+FO-14305,Frank Olsen,Consumer,10,60.0,2678.43,215.59,8.05,22.0
+BT-11395,Bill Tyler,Corporate,6,38.0,2186.61,257.9,11.79,15.0
+PM-18940,Paul MacIntyre,Consumer,3,16.0,1405.4,157.88,11.23,15.0
+GM-14680,Greg Matthias,Consumer,6,31.0,3163.63,35.47,1.12,14.55
+JH-16180,Justin Hirsh,Consumer,4,28.0,2256.39,-96.96,-4.3,22.0
+CM-12115,Chad McGuire,Consumer,4,35.0,1661.61,409.07,24.62,2.86
+HM-14860,Harry Marie,Corporate,10,76.0,8236.76,2437.97,29.6,23.1
+YS-21880,Yana Sorensen,Corporate,8,58.0,6720.44,1778.3,26.46,5.0
+KM-16375,Katherine Murray,Home Office,8,69.0,5620.18,973.77,17.33,14.0
+TS-21085,Thais Sissman,Consumer,2,4.0,4.83,-3.32,-68.74,70.0
+CL-11890,Carl Ludwig,Consumer,4,24.0,1262.01,328.08,26.0,5.71
+CM-12190,Charlotte Melton,Consumer,6,21.0,1475.14,91.21,6.18,7.14
+MC-18100,Mick Crebagga,Consumer,10,73.0,2218.99,-64.17,-2.89,26.84
+JC-15385,Jenna Caffey,Consumer,1,14.0,1058.11,502.93,47.53,5.0
+SW-20455,Shaun Weien,Consumer,7,18.0,2921.54,793.64,27.17,11.11
+CD-12790,Cynthia Delaney,Home Office,5,49.0,1860.74,403.85,21.7,2.67
+TB-21175,Thomas Boland,Corporate,4,36.0,3589.29,829.17,23.1,9.09
+BT-11680,Brian Thompson,Consumer,7,88.0,3196.75,447.76,14.01,7.0
+JE-15715,Joe Elijah,Consumer,10,97.0,8697.86,1262.28,14.51,32.27
+KA-16525,Kelly Andreada,Consumer,7,57.0,1519.51,234.91,15.46,5.45
+BF-11005,Barry Franz,Home Office,4,26.0,1333.89,-291.37,-21.84,18.0
+SC-20380,Shahid Collister,Consumer,9,80.0,5992.53,236.67,3.95,19.0
+JB-16000,Joy Bell-,Consumer,7,32.0,644.12,126.76,19.68,7.43
+MF-17665,Maureen Fritzler,Corporate,5,36.0,937.04,-341.53,-36.45,13.75
+EK-13795,Eileen Kiefer,Home Office,4,18.0,1303.48,97.1,7.45,8.75
+SG-20890,Susan Gilcrest,Corporate,3,17.0,47.95,-3.7,-7.72,40.0
+IM-15055,Ionia McGrath,Consumer,3,19.0,2872.63,975.78,33.97,10.0
+CJ-11875,Carl Jackson,Corporate,1,5.0,16.52,1.65,9.99,20.0
+HP-14815,Harold Pawlan,Home Office,7,44.0,1990.31,373.87,18.78,30.0
+KB-16585,Ken Black,Corporate,12,102.0,2744.74,579.36,21.11,10.87
+KD-16345,Katherine Ducich,Consumer,6,36.0,1888.96,328.59,17.4,13.0
+ER-13855,Elpida Rittenbach,Corporate,3,27.0,1245.79,-295.74,-23.74,20.0
+DS-13180,David Smith,Corporate,9,68.0,2881.8,163.68,5.68,15.35
+KC-16540,Kelly Collister,Consumer,4,28.0,3908.27,709.43,18.15,20.0
+RC-19825,Roy Collins,Consumer,6,29.0,966.41,63.99,6.62,11.0
+KW-16435,Katrina Willman,Consumer,5,42.0,4416.52,1756.14,39.76,11.0
+RB-19795,Ross Baird,Home Office,8,92.0,5633.31,-461.74,-8.2,25.0
+TB-21595,Troy Blackwell,Consumer,5,29.0,1387.57,-136.4,-9.83,27.14
+RB-19360,Raymond Buch,Consumer,6,71.0,15117.35,6976.09,46.15,9.44
+JS-15940,Joni Sundaresam,Home Office,5,37.0,469.16,-327.93,-69.9,33.75
+CM-12385,Christopher Martinez,Consumer,4,34.0,8954.01,3899.9,43.55,12.0
+AA-10375,Allen Armold,Consumer,9,41.0,1056.39,277.39,26.26,8.0
+AR-10510,Andrew Roberts,Consumer,5,33.0,264.87,43.65,16.48,21.43
+SC-20695,Steve Chapman,Corporate,10,66.0,2576.4,611.82,23.75,15.71
+HW-14935,Helen Wasserman,Corporate,8,85.0,9300.25,2164.17,23.27,4.5
+GM-14440,Gary McGarr,Consumer,7,43.0,3582.82,347.27,9.69,11.82
+BW-11110,Bart Watters,Corporate,8,74.0,4750.36,921.26,19.39,14.12
+SJ-20125,Sanjit Jacobs,Home Office,12,104.0,3949.65,144.12,3.65,23.33
+SM-20005,Sally Matthias,Consumer,4,26.0,244.49,-26.59,-10.88,26.67
+MS-17365,Maribeth Schnelling,Consumer,10,105.0,7443.68,844.93,11.35,16.04
+JJ-15760,Joel Jenkins,Home Office,2,11.0,195.0,34.46,17.67,6.67
+NM-18520,Neoma Murray,Consumer,10,60.0,2161.98,788.95,36.49,26.0
+KT-16480,Kean Thornton,Consumer,10,37.0,4642.1,194.07,4.18,14.77
+PF-19225,Phillip Flathmann,Consumer,5,32.0,2206.12,591.3,26.8,6.0
+FG-14260,Frank Gastineau,Home Office,7,48.0,1383.13,394.74,28.54,11.82
+MN-17935,Michael Nguyen,Consumer,6,36.0,2477.94,290.82,11.74,26.0
+SZ-20035,Sam Zeldin,Home Office,11,69.0,3625.34,366.43,10.11,22.0
+MM-17920,Michael Moore,Consumer,11,68.0,3794.07,82.11,2.16,18.13
+CS-12505,Cindy Stewart,Consumer,6,40.0,5690.06,-6626.37,-116.46,20.0
+AR-10540,Andy Reiter,Consumer,6,33.0,6608.45,2884.61,43.65,6.67
+SG-20470,Sheri Gordon,Consumer,8,62.0,1884.8,-119.01,-6.31,15.0
+TT-21460,Tonja Turnell,Home Office,7,48.0,5364.8,1124.51,20.96,12.86
+DA-13450,Dianna Arnett,Home Office,4,27.0,156.76,56.79,36.23,12.5
+BP-11230,Benjamin Patterson,Consumer,5,14.0,1181.49,-197.28,-16.7,6.67
+AC-10615,Ann Chong,Corporate,5,59.0,2537.69,298.82,11.78,11.11
+JD-16015,Joy Daniels,Consumer,6,39.0,385.43,26.76,6.94,30.91
+EM-13825,Elizabeth Moffitt,Corporate,8,57.0,2339.6,682.56,29.17,6.25
+TM-21010,Tamara Manning,Consumer,8,67.0,2955.23,573.3,19.4,5.26
+LS-17200,Luke Schmidt,Corporate,6,54.0,1010.25,244.19,24.17,20.0
+MA-17995,Michelle Arnett,Home Office,6,42.0,2453.29,280.78,11.45,4.17
+RE-19450,Richard Eichhorn,Consumer,5,47.0,876.7,209.22,23.86,13.33
+BF-11215,Benjamin Farhat,Home Office,4,48.0,1585.17,523.22,33.01,5.0
+KB-16405,Katrina Bavinger,Home Office,3,25.0,908.82,274.28,30.18,4.44
+EB-14110,Eugene Barchas,Consumer,6,30.0,3071.14,184.76,6.02,20.91
+SJ-20215,Sarah Jordon,Consumer,6,35.0,1341.04,-23.52,-1.75,37.0
+AH-10690,Anna Häberlin,Corporate,12,102.0,7888.3,1298.0,16.45,21.74
+KM-16660,Khloe Miller,Consumer,5,30.0,453.54,91.15,20.1,4.44
+SH-20635,Stefanie Holloman,Corporate,2,16.0,2096.39,260.63,12.43,20.0
+LW-17125,Liz Willingham,Consumer,3,15.0,1259.04,192.63,15.3,0.0
+SM-20905,Susan MacKendrick,Consumer,1,20.0,1043.05,-237.29,-22.75,28.33

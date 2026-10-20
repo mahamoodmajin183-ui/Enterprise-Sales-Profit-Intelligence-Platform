@@ -172,7 +172,53 @@ class DuckDBWarehouse:
                 GROUP BY discount_bracket;
             """)
 
+            # Customer Contribution Mart
+            con.execute("""
+                CREATE OR REPLACE VIEW mart_customer_performance AS
+                SELECT 
+                    customer_id,
+                    customer_name,
+                    segment,
+                    COUNT(DISTINCT order_id) AS total_orders,
+                    SUM(quantity) AS total_units_bought,
+                    ROUND(SUM(sales), 2) AS total_revenue,
+                    ROUND(SUM(profit), 2) AS total_profit,
+                    CASE 
+                        WHEN SUM(sales) > 0 THEN ROUND((SUM(profit) / SUM(sales)) * 100, 2) 
+                        ELSE 0.0 
+                    END AS profit_margin_pct,
+                    ROUND(AVG(discount) * 100, 2) AS avg_discount_pct
+                FROM fact_sales
+                GROUP BY customer_id, customer_name, segment;
+            """)
+
             logger.info("Successfully created all tables, dimensional views, and analytical marts in DuckDB.")
+        finally:
+            con.close()
+
+    def export_marts(self, output_dir: Optional[Path] = None) -> Dict[str, str]:
+        """Export analytical marts to CSV and Parquet files for BI dashboard consumption."""
+        out_path = output_dir or (Path(self.db_path).parent.parent / "data" / "processed" / "marts")
+        out_path.mkdir(parents=True, exist_ok=True)
+        marts = [
+            "mart_monthly_performance",
+            "mart_category_performance",
+            "mart_regional_performance",
+            "mart_discount_performance",
+            "mart_customer_performance",
+        ]
+        exported = {}
+        con = self.get_connection()
+        try:
+            for mart in marts:
+                df = con.execute(f"SELECT * FROM {mart}").df()
+                csv_file = out_path / f"{mart}.csv"
+                parquet_file = out_path / f"{mart}.parquet"
+                df.to_csv(csv_file, index=False)
+                df.to_parquet(parquet_file, index=False)
+                exported[mart] = str(parquet_file)
+                logger.info(f"Exported mart {mart} ({len(df)} rows) to {parquet_file}")
+            return exported
         finally:
             con.close()
 

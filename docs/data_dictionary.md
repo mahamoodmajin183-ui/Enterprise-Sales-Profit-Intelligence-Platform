@@ -126,3 +126,41 @@ Any row failing required schema or business validation rules is preserved in `re
 - Appends `rejection_reason` (e.g., `EXACT_DUPLICATE_ROW`, `NEGATIVE_SALES`, `INVALID_QUANTITY`, `INVALID_DISCOUNT_OUT_OF_BOUNDS`, `INVALID_UNPARSEABLE_DATE`).
 - Guarantees strict mathematical reconciliation: $\text{Raw Count} = \text{Cleaned Count} + \text{Rejected Count}$.
 
+---
+
+## 6. Analytical Marts & Table Grains (`database/sales_warehouse.duckdb`)
+
+| Object Name | Object Type | Grain / Primary Key | Description & Row Count |
+| :--- | :--- | :--- | :--- |
+| `fact_sales` | Base Table | `row_id` (1 row per order line) | Cleaned transactional order items (`9,994` rows). |
+| `dim_customers` | Dimensional View | `customer_id` | Unique customer profiles and market segments (`793` rows). |
+| `dim_products` | Dimensional View | `product_id` | Product catalog hierarchy (`1,862` rows). |
+| `dim_geography` | Dimensional View | `postal_code` | Geographic location hierarchy (`631` rows). |
+| `mart_monthly_performance` | Analytical View | `order_year, order_month` | Monthly aggregations with 12-month YoY lag growth (`48` monthly rows). |
+| `mart_category_performance` | Analytical View | `category, sub_category` | Category metrics, loss rates, and loss totals (`17` sub-categories). |
+| `mart_regional_performance` | Analytical View | `region, state` | State-level revenue, margin, and return rates (`49` states). |
+| `mart_discount_performance` | Analytical View | `discount_bracket` | 5 discount tiers and margin destruction metrics (`5` tiers). |
+| `mart_customer_performance` | Analytical View | `customer_id` | Customer lifetime spend, profit, units, and order count (`793` customers). |
+
+---
+
+## 7. Business Metric Formulations & Zero-Denominator Rules
+
+1. **Total Revenue ($USD):**
+   $$\text{Revenue} = \sum \text{sales}$$
+2. **Total Profit ($USD):**
+   $$\text{Profit} = \sum \text{profit}$$
+3. **Estimated Operating Cost ($USD):**
+   $$\text{Cost} = \sum (\text{sales} - \text{profit})$$
+4. **Safe Profit Margin (%):**
+   $$\text{Margin \%} = \begin{cases} \left(\frac{\sum \text{profit}}{\sum \text{sales}}\right) \times 100 & \text{if } \sum \text{sales} > 0 \\ 0.00 & \text{otherwise} \end{cases}$$
+5. **Average Order Value (AOV):**
+   $$\text{AOV} = \begin{cases} \frac{\sum \text{sales}}{\text{COUNT}(\text{DISTINCT order\_id})} & \text{if } \text{COUNT}(\text{DISTINCT order\_id}) > 0 \\ 0.00 & \text{otherwise} \end{cases}$$
+6. **Return Rate (%):**
+   $$\text{Return Rate \%} = \frac{\text{COUNT}(\text{DISTINCT } \text{order\_id where is\_returned = True})}{\text{COUNT}(\text{DISTINCT order\_id})} \times 100$$
+7. **Year-over-Year (YoY) Revenue Growth (%):**
+   $$\text{YoY Growth \%} = \frac{\text{Revenue}_{t} - \text{Revenue}_{t-12}}{\text{Revenue}_{t-12}} \times 100$$
+8. **Loss Rate (%):**
+   $$\text{Loss Rate \%} = \frac{\text{COUNT}(\text{line items with profit } < 0)}{\text{COUNT}(\text{all line items})} \times 100$$
+
+

@@ -104,9 +104,10 @@ project_1/
 │   ├── 03_category_product.sql         # Category, sub-category, and product contribution
 │   ├── 04_regional_performance.sql      # Geographic performance and regional loss centers
 │   ├── 05_discount_impact.sql          # Discount tier elasticity and profit destruction
-│   ├── 06_top_bottom_performers.sql    # Top 10 profitable products vs top 10 loss leaders
+│   ├── 06_top_bottom_performers.sql    # Top/Bottom products by profit, revenue & margin traps
 │   ├── 07_anomaly_investigation.sql    # Forensic isolation of severe loss transactions
-│   └── 08_reconciliation.sql           # End-to-end mathematical reconciliation query
+│   ├── 08_reconciliation.sql           # End-to-end mathematical reconciliation query
+│   └── 09_customer_contribution.sql    # Customer buying patterns, LTV, deciles & contribution
 │
 ├── app/
 │   ├── dashboard.py                    # Modern, dark-mode Streamlit Executive Dashboard
@@ -115,7 +116,7 @@ project_1/
 │       └── charts.py                   # High-performance Plotly visualization components
 │
 ├── docs/
-│   ├── data_dictionary.md              # Exhaustive schema definitions and constraints
+│   ├── data_dictionary.md              # Exhaustive schema definitions, marts, and constraints
 │   ├── business_findings_report.md      # In-depth diagnostic report with computed evidence
 │   ├── interview_guide.md              # Complete Q&A guide for Data/BI Analyst interviews
 │   └── powerbi_guide.md                # Star schema and DAX measures guide for Power BI
@@ -148,15 +149,15 @@ Run the ingestion, profiling, cleaning, and Parquet generation pipeline:
 python src/data_cleaner.py
 ```
 
-### 3. Initialize DuckDB & Execute SQL Suite
-Initialize the analytical database and run all 8 SQL queries:
+### 3. Initialize DuckDB, Export Marts & Execute SQL Suite
+Initialize the analytical database, export marts, and run all 9 SQL queries:
 ```bash
 python src/duckdb_manager.py
 python src/sql_runner.py
 ```
 
 ### 4. Run Automated Pytest Suite
-Execute all 13 unit, reconciliation, and edge-case tests:
+Execute all 19 unit, reconciliation, and edge-case tests:
 ```bash
 python -m pytest tests -v
 ```

@@ -42,6 +42,26 @@ discount_mart_totals AS (
         ROUND(SUM(total_revenue), 2) AS total_revenue,
         ROUND(SUM(total_profit), 2) AS total_profit
     FROM mart_discount_performance
+),
+regional_mart_totals AS (
+    SELECT
+        'Mart: Regional Performance' AS layer_name,
+        NULL AS total_rows,
+        NULL AS distinct_orders,
+        NULL AS distinct_customers,
+        ROUND(SUM(total_revenue), 2) AS total_revenue,
+        ROUND(SUM(total_profit), 2) AS total_profit
+    FROM mart_regional_performance
+),
+customer_mart_totals AS (
+    SELECT
+        'Mart: Customer Performance' AS layer_name,
+        NULL AS total_rows,
+        NULL AS distinct_orders,
+        COUNT(DISTINCT customer_id) AS distinct_customers,
+        ROUND(SUM(total_revenue), 2) AS total_revenue,
+        ROUND(SUM(total_profit), 2) AS total_profit
+    FROM mart_customer_performance
 )
 SELECT * FROM base_totals
 UNION ALL
@@ -49,4 +69,8 @@ SELECT * FROM monthly_mart_totals
 UNION ALL
 SELECT * FROM category_mart_totals
 UNION ALL
-SELECT * FROM discount_mart_totals;
+SELECT * FROM regional_mart_totals
+UNION ALL
+SELECT * FROM discount_mart_totals
+UNION ALL
+SELECT * FROM customer_mart_totals;

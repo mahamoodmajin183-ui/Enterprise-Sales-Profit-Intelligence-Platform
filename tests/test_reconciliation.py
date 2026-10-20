@@ -47,3 +47,48 @@ def test_category_mart_reconciliation():
         py_row = py_cat_grouped[py_cat_grouped["category"] == cat].iloc[0]
         assert abs(row["cat_revenue"] - py_row["total_revenue"]) < 0.01
         assert abs(row["cat_profit"] - py_row["total_profit"]) < 0.01
+
+
+def test_customer_mart_reconciliation():
+    """Verify customer totals in DuckDB customer mart match fact table totals."""
+    warehouse = DuckDBWarehouse()
+    totals = warehouse.query("""
+        SELECT 
+            ROUND(SUM(total_revenue), 2) AS cust_rev,
+            ROUND(SUM(total_profit), 2) AS cust_prof,
+            COUNT(DISTINCT customer_id) AS cust_count
+        FROM mart_customer_performance;
+    """).iloc[0]
+
+    fact_totals = warehouse.query("""
+        SELECT 
+            ROUND(SUM(sales), 2) AS fact_rev,
+            ROUND(SUM(profit), 2) AS fact_prof,
+            COUNT(DISTINCT customer_id) AS fact_cust_count
+        FROM fact_sales;
+    """).iloc[0]
+
+    assert abs(totals["cust_rev"] - fact_totals["fact_rev"]) < 0.01
+    assert abs(totals["cust_prof"] - fact_totals["fact_prof"]) < 0.01
+    assert totals["cust_count"] == fact_totals["fact_cust_count"]
+
+
+def test_regional_mart_reconciliation():
+    """Verify regional mart totals in DuckDB match fact table totals."""
+    warehouse = DuckDBWarehouse()
+    reg_totals = warehouse.query("""
+        SELECT 
+            ROUND(SUM(total_revenue), 2) AS reg_rev,
+            ROUND(SUM(total_profit), 2) AS reg_prof
+        FROM mart_regional_performance;
+    """).iloc[0]
+
+    fact_totals = warehouse.query("""
+        SELECT 
+            ROUND(SUM(sales), 2) AS fact_rev,
+            ROUND(SUM(profit), 2) AS fact_prof
+        FROM fact_sales;
+    """).iloc[0]
+
+    assert abs(reg_totals["reg_rev"] - fact_totals["fact_rev"]) < 0.01
+    assert abs(reg_totals["reg_prof"] - fact_totals["fact_prof"]) < 0.01

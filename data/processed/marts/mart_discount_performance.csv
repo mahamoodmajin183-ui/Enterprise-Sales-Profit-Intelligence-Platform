@@ -1,0 +1,6 @@
+discount_bracket,line_item_count,total_orders,avg_discount_pct,total_revenue,total_profit,profit_margin_pct,loss_transaction_count,loss_rate_pct,total_loss_dollars
+1% - 10% (Low),94,89,10.0,54369.3,9029.21,16.61,4,4.26,-29.28
+0% (None),4798,2644,0.0,1087908.47,320987.01,29.5,0,0.0,0.0
+> 40% (Deep Discount),933,737,70.03,128632.12,-99558.74,-77.4,933,100.0,-99558.74
+21% - 40% (High),460,400,34.6,234137.95,-35817.54,-15.3,415,90.22,-38956.75
+11% - 20% (Moderate),3709,2436,19.93,792152.81,91756.6,11.58,519,13.99,-17586.87
