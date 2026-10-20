@@ -1,0 +1,268 @@
+{
+  "dataset_name": "Raw Orders",
+  "total_rows": 9994,
+  "total_columns": 21,
+  "columns": [
+    "Row ID",
+    "Order ID",
+    "Order Date",
+    "Ship Date",
+    "Ship Mode",
+    "Customer ID",
+    "Customer Name",
+    "Segment",
+    "Country",
+    "City",
+    "State",
+    "Postal Code",
+    "Region",
+    "Product ID",
+    "Category",
+    "Sub-Category",
+    "Product Name",
+    "Sales",
+    "Quantity",
+    "Discount",
+    "Profit"
+  ],
+  "duplicate_rows": 0,
+  "row_id_duplicates": 0,
+  "unique_orders": 5009,
+  "missing_summary": {
+    "Row ID": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "int64"
+    },
+    "Order ID": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Order Date": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Ship Date": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Ship Mode": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Customer ID": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Customer Name": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Segment": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Country": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "City": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "State": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Postal Code": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "int64"
+    },
+    "Region": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Product ID": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Category": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Sub-Category": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Product Name": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "str"
+    },
+    "Sales": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "float64"
+    },
+    "Quantity": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "int64"
+    },
+    "Discount": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "float64"
+    },
+    "Profit": {
+      "missing_count": 0,
+      "missing_pct": 0.0,
+      "dtype": "float64"
+    }
+  },
+  "numeric_summary": {
+    "Row ID": {
+      "min": 1.0,
+      "max": 9994.0,
+      "mean": 4997.5,
+      "median": 4997.5,
+      "std": 2885.1636,
+      "negative_count": 0,
+      "zero_count": 0
+    },
+    "Postal Code": {
+      "min": 1040.0,
+      "max": 99301.0,
+      "mean": 55190.3794,
+      "median": 56430.5,
+      "std": 32063.6934,
+      "negative_count": 0,
+      "zero_count": 0
+    },
+    "Sales": {
+      "min": 0.444,
+      "max": 22638.48,
+      "mean": 229.858,
+      "median": 54.49,
+      "std": 623.2451,
+      "negative_count": 0,
+      "zero_count": 0
+    },
+    "Quantity": {
+      "min": 1.0,
+      "max": 14.0,
+      "mean": 3.7896,
+      "median": 3.0,
+      "std": 2.2251,
+      "negative_count": 0,
+      "zero_count": 0
+    },
+    "Discount": {
+      "min": 0.0,
+      "max": 0.8,
+      "mean": 0.1562,
+      "median": 0.2,
+      "std": 0.2065,
+      "negative_count": 0,
+      "zero_count": 4798
+    },
+    "Profit": {
+      "min": -6599.978,
+      "max": 8399.976,
+      "mean": 28.6569,
+      "median": 8.6665,
+      "std": 234.2601,
+      "negative_count": 1871,
+      "zero_count": 65
+    }
+  },
+  "date_summary": {
+    "Order Date": {
+      "min_date": "2011-01-04",
+      "max_date": "2014-12-31",
+      "unparseable_count": 0
+    },
+    "Ship Date": {
+      "min_date": "2011-01-08",
+      "max_date": "2015-01-06",
+      "unparseable_count": 0
+    }
+  },
+  "cardinality_summary": {
+    "Order ID": {
+      "unique_values": 5009,
+      "top_value": "CA-2014-100111"
+    },
+    "Order Date": {
+      "unique_values": 1238,
+      "top_value": "9/6/2013"
+    },
+    "Ship Date": {
+      "unique_values": 1334,
+      "top_value": "12/16/2012"
+    },
+    "Ship Mode": {
+      "unique_values": 4,
+      "top_value": "Standard Class"
+    },
+    "Customer ID": {
+      "unique_values": 793,
+      "top_value": "WB-21850"
+    },
+    "Customer Name": {
+      "unique_values": 793,
+      "top_value": "William Brown"
+    },
+    "Segment": {
+      "unique_values": 3,
+      "top_value": "Consumer"
+    },
+    "Country": {
+      "unique_values": 1,
+      "top_value": "United States"
+    },
+    "City": {
+      "unique_values": 531,
+      "top_value": "New York City"
+    },
+    "State": {
+      "unique_values": 49,
+      "top_value": "California"
+    },
+    "Region": {
+      "unique_values": 4,
+      "top_value": "West"
+    },
+    "Product ID": {
+      "unique_values": 1862,
+      "top_value": "OFF-PA-10001970"
+    },
+    "Category": {
+      "unique_values": 3,
+      "top_value": "Office Supplies"
+    },
+    "Sub-Category": {
+      "unique_values": 17,
+      "top_value": "Binders"
+    },
+    "Product Name": {
+      "unique_values": 1841,
+      "top_value": "Staples"
+    }
+  }
+}

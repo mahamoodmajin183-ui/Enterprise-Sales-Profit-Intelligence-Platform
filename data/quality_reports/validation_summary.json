@@ -1,0 +1,27 @@
+{
+  "status": "PASSED",
+  "initial_raw_rows": 5,
+  "final_cleaned_rows": 4,
+  "dropped_rows": 1,
+  "unique_orders": 3,
+  "unique_customers": 3,
+  "unique_products": 4,
+  "min_order_date": "2023-01-15",
+  "max_order_date": "2023-03-10",
+  "total_revenue": 2650.0,
+  "total_profit": -50.0,
+  "overall_profit_margin_pct": -1.89,
+  "unprofitable_rows_count": 1,
+  "unprofitable_rows_pct": 25.0,
+  "total_loss_amount": -400.0,
+  "returned_orders_count": 2,
+  "return_rate_pct": 66.67,
+  "validation_checks": {
+    "no_duplicate_rows": true,
+    "no_negative_sales": true,
+    "no_zero_or_negative_quantity": true,
+    "valid_discount_range": true,
+    "valid_shipping_dates": true,
+    "safe_profit_margin_guard": true
+  }
+}

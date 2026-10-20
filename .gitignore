@@ -1,0 +1,21 @@
+# Python Virtual Environment
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+
+# Local DuckDB Database Lock / Temp files
+*.duckdb.wal
+*.duckdb.tmp
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Streamlit run artifacts
+.streamlit/
