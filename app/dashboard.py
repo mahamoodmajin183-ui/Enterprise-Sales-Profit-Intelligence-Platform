@@ -143,15 +143,23 @@ st.sidebar.image("https://img.icons8.com/fluency/96/combo-chart.png", width=64)
 st.sidebar.title("Analytics Filters")
 st.sidebar.caption("Filter transactions dynamically across all views.")
 
+# Filter Reset Button
+if st.sidebar.button("🔄 Reset All Filters", use_container_width=True):
+    for key in ["filter_categories", "filter_sub_categories", "filter_regions", "filter_segments", "filter_brackets", "filter_dates"]:
+        if key in st.session_state:
+            del st.session_state[key]
+    st.rerun()
+
 # Date Range Filter
 min_date = df_raw["order_date"].min().date()
 max_date = df_raw["order_date"].max().date()
 
 selected_dates = st.sidebar.date_input(
     "Select Order Date Range",
-    value=(min_date, max_date),
+    value=st.session_state.get("filter_dates", (min_date, max_date)),
     min_value=min_date,
     max_value=max_date,
+    key="filter_dates",
 )
 
 if isinstance(selected_dates, (tuple, list)) and len(selected_dates) == 2:
@@ -161,25 +169,55 @@ else:
 
 # Category Filter
 all_categories = sorted(df_raw["category"].unique())
-selected_categories = st.sidebar.multiselect("Category", options=all_categories, default=all_categories)
+selected_categories = st.sidebar.multiselect(
+    "Category",
+    options=all_categories,
+    default=st.session_state.get("filter_categories", all_categories),
+    key="filter_categories",
+)
+
+# Dynamic Sub-Category Filter based on selected categories
+available_subcats = sorted(df_raw[df_raw["category"].isin(selected_categories)]["sub_category"].unique()) if selected_categories else []
+selected_subcats = st.sidebar.multiselect(
+    "Sub-Category",
+    options=available_subcats,
+    default=st.session_state.get("filter_sub_categories", available_subcats),
+    key="filter_sub_categories",
+)
 
 # Region Filter
 all_regions = sorted(df_raw["region"].unique())
-selected_regions = st.sidebar.multiselect("Region", options=all_regions, default=all_regions)
+selected_regions = st.sidebar.multiselect(
+    "Region",
+    options=all_regions,
+    default=st.session_state.get("filter_regions", all_regions),
+    key="filter_regions",
+)
 
 # Customer Segment Filter
 all_segments = sorted(df_raw["segment"].unique())
-selected_segments = st.sidebar.multiselect("Customer Segment", options=all_segments, default=all_segments)
+selected_segments = st.sidebar.multiselect(
+    "Customer Segment",
+    options=all_segments,
+    default=st.session_state.get("filter_segments", all_segments),
+    key="filter_segments",
+)
 
 # Discount Tier Filter
 all_brackets = sorted(df_raw["discount_bracket"].unique())
-selected_brackets = st.sidebar.multiselect("Discount Bracket", options=all_brackets, default=all_brackets)
+selected_brackets = st.sidebar.multiselect(
+    "Discount Bracket",
+    options=all_brackets,
+    default=st.session_state.get("filter_brackets", all_brackets),
+    key="filter_brackets",
+)
 
 # Apply Filter Mask
 mask = (
     (df_raw["order_date"].dt.date >= start_date)
     & (df_raw["order_date"].dt.date <= end_date)
     & (df_raw["category"].isin(selected_categories))
+    & (df_raw["sub_category"].isin(selected_subcats))
     & (df_raw["region"].isin(selected_regions))
     & (df_raw["segment"].isin(selected_segments))
     & (df_raw["discount_bracket"].isin(selected_brackets))
@@ -189,6 +227,11 @@ df_filtered = df_raw[mask].copy()
 # Initialize Metrics Engine with filtered data
 metrics = MetricsEngine(data=df_filtered)
 kpis = metrics.calculate_executive_kpis()
+
+# Empty results guard
+if df_filtered.empty:
+    st.warning("⚠️ **No transaction records match the current filter criteria.** Please adjust your filters or click 'Reset All Filters' in the sidebar.")
+    st.stop()
 
 # ---------------------------------------------------------
 # Main Page Header & Provenance
