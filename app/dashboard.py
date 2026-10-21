@@ -23,7 +23,12 @@ from app.components.charts import (
     create_category_profitability_chart,
     create_discount_elasticity_chart,
     create_regional_map,
+    create_anomaly_scatter,
+    create_trend_signal_chart,
+    create_product_matrix_scatter,
+    create_seasonality_chart,
 )
+from src.advanced_analytics import AdvancedAnalytics
 
 # Page Configuration
 st.set_page_config(
@@ -345,12 +350,13 @@ st.write("")
 # ---------------------------------------------------------
 # Tabbed Analytical Views
 # ---------------------------------------------------------
-tab1, tab2, tab3, tab4, tab5 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "📈 Executive Trends",
     "🏷️ Profitability & Discounts",
     "🗺️ Regional Performance",
     "🔍 Anomaly & Forensic Review",
     "🛡️ Data Quality & Audit",
+    "🧪 Advanced Analytics",
 ])
 
 # ---------------------------------------------------------
@@ -517,3 +523,240 @@ with tab5:
 
     st.markdown("#### Discrepancy Deltas")
     st.json(reconciliation["deltas"])
+
+# ---------------------------------------------------------
+# TAB 6: ADVANCED ANALYTICS
+# ---------------------------------------------------------
+with tab6:
+    st.subheader("Stage 5: Statistical Advanced Analytics")
+    st.markdown(
+        """
+        > **Methodology:** All analyses use the filtered dataset from sidebar controls.
+        > Statistical methods are documented inline. Correlation findings are associations only — not causal claims.
+        """
+    )
+
+    adv = AdvancedAnalytics(df=df_filtered)
+
+    # --- Section 1: Profit Anomaly Detection ---
+    st.markdown("---")
+    st.markdown("### 🎯 Profit Anomaly Detection (IQR + Z-Score)")
+    adv_summary = adv.get_anomaly_summary()
+
+    a1, a2, a3, a4, a5 = st.columns(5)
+    with a1:
+        st.metric("Flagged Transactions", f"{adv_summary['total_flagged']:,}")
+    with a2:
+        st.metric("Anomaly Rate", f"{adv_summary['anomaly_rate_pct']:.1f}%")
+    with a3:
+        st.metric("IQR Lower Fence", f"${adv_summary['iqr_lower_fence']:,.0f}")
+    with a4:
+        st.metric("IQR Upper Fence", f"${adv_summary['iqr_upper_fence']:,.0f}")
+    with a5:
+        st.metric("Z-Score Threshold", f"|z| > {adv_summary['zscore_threshold']}")
+
+    st.caption(
+        f"**Method:** {adv_summary['methodology']}. "
+        "Transactions flagged by *either* criterion are included. "
+        "Statistical anomalies are not necessarily operational errors — investigate before acting."
+    )
+
+    df_adv_anomalies = adv.detect_profit_anomalies()
+    if not df_adv_anomalies.empty:
+        fig_anomaly = create_anomaly_scatter(df_adv_anomalies)
+        st.plotly_chart(fig_anomaly, use_container_width=True)
+
+        st.markdown("#### Flagged Transaction Detail")
+        display_cols = [c for c in [
+            "order_id", "order_date_str", "customer_name", "segment",
+            "category", "sub_category", "product_name",
+            "sales", "profit", "profit_zscore", "anomaly_reason",
+        ] if c in df_adv_anomalies.columns]
+        st.dataframe(df_adv_anomalies[display_cols], use_container_width=True, hide_index=True)
+
+        csv_adv = df_adv_anomalies.to_csv(index=False).encode("utf-8")
+        st.download_button(
+            "📥 Download Statistical Anomaly Report (CSV)",
+            data=csv_adv,
+            file_name="statistical_anomaly_report.csv",
+            mime="text/csv",
+        )
+    else:
+        st.info("No statistical anomalies detected in the current filtered dataset.")
+
+    # --- Section 2: Sales Trend Signal Analysis ---
+    st.markdown("---")
+    st.markdown("### 📊 Sales Trend Signal Analysis")
+    st.caption(
+        "MoM % change is classified into trend signals when |change| >= 5% and |acceleration| >= 2%. "
+        "Dot colours: 🟢 Accelerating growth · 🟡 Recovering · ⚫ Stable · 🔴 Declining."
+    )
+    df_trend = adv.get_trend_analysis()
+    if not df_trend.empty:
+        fig_trend = create_trend_signal_chart(df_trend)
+        st.plotly_chart(fig_trend, use_container_width=True)
+
+        col_trend1, col_trend2 = st.columns(2)
+        with col_trend1:
+            signal_counts = df_trend["trend_signal"].value_counts().reset_index()
+            signal_counts.columns = ["Signal", "Months"]
+            st.markdown("#### Signal Distribution")
+            st.dataframe(signal_counts, use_container_width=True, hide_index=True)
+
+        with col_trend2:
+            st.markdown("#### Seasonality by Quarter")
+            df_seasonality = adv.get_seasonality_analysis()
+            if not df_seasonality.empty:
+                fig_seas = create_seasonality_chart(df_seasonality)
+                st.plotly_chart(fig_seas, use_container_width=True)
+                st.caption(
+                    f"Based on {df_seasonality['years_included'].iloc[0]} complete year(s) of data. "
+                    "Error bars = ±1 standard deviation across years."
+                )
+            else:
+                st.info("Insufficient complete yearly data for seasonality analysis.")
+
+    # --- Section 3: Product Performance Matrix ---
+    st.markdown("---")
+    st.markdown("### 🔲 Product Performance Matrix")
+    st.caption(
+        "Products plotted by revenue (log scale, x-axis) vs. profit margin % (y-axis). "
+        "Quadrants: **Stars** = high revenue & high margin | **Revenue Traps** = high revenue but low/negative margin | "
+        "**Niche Gems** = low revenue but strong margin | **Laggards** = low on both dimensions."
+    )
+
+    REVENUE_THRESHOLD = 1000.0
+    MARGIN_THRESHOLD = 10.0
+
+    prod_matrix = adv.get_product_performance_matrix(
+        revenue_threshold=REVENUE_THRESHOLD,
+        margin_warning_pct=MARGIN_THRESHOLD,
+    )
+
+    # Combine all products for scatter (use category metrics as proxy)
+    df_cat_for_matrix = metrics.get_category_metrics()
+    if "product_id" not in df_cat_for_matrix.columns:
+        # Build product-level summary for scatter
+        df_prod_scatter = (
+            df_filtered.groupby(["product_id", "product_name", "category", "sub_category"])
+            .agg(total_revenue=("sales", "sum"), total_profit=("profit", "sum"))
+            .reset_index()
+        )
+        df_prod_scatter["profit_margin_pct"] = (
+            df_prod_scatter["total_profit"] / df_prod_scatter["total_revenue"].replace(0, float("nan")) * 100
+        ).round(2)
+    else:
+        df_prod_scatter = df_cat_for_matrix
+
+    if not df_prod_scatter.empty:
+        fig_matrix = create_product_matrix_scatter(
+            df_prod_scatter,
+            revenue_threshold=REVENUE_THRESHOLD,
+            margin_warning_pct=MARGIN_THRESHOLD,
+        )
+        st.plotly_chart(fig_matrix, use_container_width=True)
+
+    m1, m2, m3, m4 = st.columns(4)
+    with m1:
+        st.metric("⭐ Stars", len(prod_matrix["stars"]))
+    with m2:
+        st.metric("⚠️ Revenue Traps", len(prod_matrix["revenue_traps"]))
+    with m3:
+        st.metric("💎 Niche Gems", len(prod_matrix["niche_gems"]))
+    with m4:
+        st.metric("📉 Laggards", len(prod_matrix["laggards"]))
+
+    if not prod_matrix["revenue_traps"].empty:
+        st.markdown("#### ⚠️ Revenue Traps — High Sales, Poor Margins")
+        rt_cols = [c for c in ["product_name", "category", "sub_category",
+                                "total_revenue", "total_profit", "profit_margin_pct",
+                                "avg_discount_pct"] if c in prod_matrix["revenue_traps"].columns]
+        st.dataframe(prod_matrix["revenue_traps"][rt_cols].head(15),
+                     use_container_width=True, hide_index=True)
+
+    # --- Section 4: Discount–Profitability Correlation ---
+    st.markdown("---")
+    st.markdown("### 🔗 Discount–Profitability Correlation (Spearman)")
+    corr = adv.get_discount_correlation()
+
+    rho_col, p_col, sig_col = st.columns(3)
+    with rho_col:
+        st.metric("Spearman Rho (Overall)", f"{corr['overall_rho']:.4f}")
+    with p_col:
+        st.metric("p-value", f"{corr['overall_p_value']:.4f}")
+    with sig_col:
+        sig_label = "✅ Significant (p<0.05)" if corr["overall_significant"] else "⚠️ Not Significant"
+        st.metric("Statistical Significance", sig_label)
+
+    st.info(corr["interpretation"])
+
+    # Verified bracket-level breakdown from the filtered dataset
+    if "discount_bracket" in df_filtered.columns:
+        st.markdown("#### Profit Margin by Discount Bracket (filtered data)")
+        st.caption(
+            "Average profit margin per transaction, grouped by discount tier. "
+            "The 'No Discount' row serves as the baseline. "
+            "This is a descriptive summary — product mix and other factors are not controlled."
+        )
+        bracket_summary = (
+            df_filtered.groupby("discount_bracket")
+            .agg(
+                transactions=("order_id", "count"),
+                avg_margin_pct=("profit_margin", lambda x: round(x.mean() * 100, 2)),
+                total_profit=("profit", "sum"),
+            )
+            .reset_index()
+            .rename(columns={
+                "discount_bracket": "Discount Bracket",
+                "transactions": "Transactions",
+                "avg_margin_pct": "Avg Profit Margin (%)",
+                "total_profit": "Total Profit ($)",
+            })
+        )
+        # Colour the margin column: negative = red context
+        st.dataframe(
+            bracket_summary,
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "Avg Profit Margin (%)": st.column_config.NumberColumn(
+                    format="%.2f%%",
+                    help="Average profit margin across all transactions in this bracket",
+                ),
+                "Total Profit ($)": st.column_config.NumberColumn(
+                    format="$%.2f",
+                ),
+            },
+        )
+
+    if not corr["by_category"].empty:
+        st.markdown("#### Correlation by Product Category")
+        st.dataframe(corr["by_category"], use_container_width=True, hide_index=True)
+
+    if corr["excluded_groups"]:
+        with st.expander(f"ℹ️ {len(corr['excluded_groups'])} groups excluded (n < {10})"):
+            st.dataframe(pd.DataFrame(corr["excluded_groups"]), use_container_width=True, hide_index=True)
+
+    # --- Section 5: Regional Scorecard ---
+    st.markdown("---")
+    st.markdown("### 🗺️ Regional Performance Composite Scorecard")
+    st.caption(
+        "Score is the equal-weighted average of percentile ranks across: "
+        "profit margin %, revenue per order, return rate (inverted), and average discount given (inverted). "
+        "Range: 0 (worst) to 100 (best)."
+    )
+    df_scorecard = adv.get_regional_scorecard()
+    if not df_scorecard.empty:
+        sc_cols = ["state", "region", "profit_margin_pct", "revenue_per_order",
+                   "return_rate_pct", "avg_discount_pct", "composite_score"]
+        sc_display_cols = [c for c in sc_cols if c in df_scorecard.columns]
+        st.dataframe(
+            df_scorecard[sc_display_cols].rename(columns={
+                "state": "State", "region": "Region",
+                "profit_margin_pct": "Margin (%)", "revenue_per_order": "Rev/Order ($)",
+                "return_rate_pct": "Return Rate (%)", "avg_discount_pct": "Avg Discount (%)",
+                "composite_score": "Composite Score",
+            }),
+            use_container_width=True,
+            hide_index=True,
+        )

@@ -76,7 +76,7 @@ def assign_discount_bracket(discount: float) -> str:
 
 
 def clean_and_transform(
-    df_orders: pd.DataFrame, df_returns: pd.DataFrame
+    df_orders: pd.DataFrame, df_returns: pd.DataFrame, save: bool = False
 ) -> Tuple[pd.DataFrame, Dict[str, Any]]:
     """Clean raw orders, join returns, calculate metrics, and validate integrity.
 
@@ -314,27 +314,28 @@ def clean_and_transform(
     }
 
     # 10. Persist processed files & rejected records
-    PROCESSED_PARQUET_FILE.parent.mkdir(parents=True, exist_ok=True)
-    df.to_parquet(PROCESSED_PARQUET_FILE, index=False, engine="pyarrow")
-    df.to_csv(PROCESSED_CSV_FILE, index=False)
-    logger.info(f"Saved cleaned parquet to {PROCESSED_PARQUET_FILE} and CSV to {PROCESSED_CSV_FILE}")
+    if save:
+        PROCESSED_PARQUET_FILE.parent.mkdir(parents=True, exist_ok=True)
+        df.to_parquet(PROCESSED_PARQUET_FILE, index=False, engine="pyarrow")
+        df.to_csv(PROCESSED_CSV_FILE, index=False)
+        logger.info(f"Saved cleaned parquet to {PROCESSED_PARQUET_FILE} and CSV to {PROCESSED_CSV_FILE}")
 
-    # Persist rejected records
-    QUALITY_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    if rejected_rows_list:
-        rejected_df = pd.DataFrame(rejected_rows_list)
-        rejected_df.to_csv(REJECTED_RECORDS_FILE, index=False)
-        logger.warning(f"Saved {len(rejected_df)} rejected records with reasons to {REJECTED_RECORDS_FILE}")
-    else:
-        # Create empty rejected records file with standard columns
-        empty_rej = pd.DataFrame(columns=list(df.columns) + ["rejection_reason"])
-        empty_rej.to_csv(REJECTED_RECORDS_FILE, index=False)
-        logger.info(f"No records rejected. Wrote blank schema to {REJECTED_RECORDS_FILE}")
+        # Persist rejected records
+        QUALITY_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+        if rejected_rows_list:
+            rejected_df = pd.DataFrame(rejected_rows_list)
+            rejected_df.to_csv(REJECTED_RECORDS_FILE, index=False)
+            logger.warning(f"Saved {len(rejected_df)} rejected records with reasons to {REJECTED_RECORDS_FILE}")
+        else:
+            # Create empty rejected records file with standard columns
+            empty_rej = pd.DataFrame(columns=list(df.columns) + ["rejection_reason"])
+            empty_rej.to_csv(REJECTED_RECORDS_FILE, index=False)
+            logger.info(f"No records rejected. Wrote blank schema to {REJECTED_RECORDS_FILE}")
 
-    # Persist validation report
-    with open(VALIDATION_REPORT_FILE, "w", encoding="utf-8") as f:
-        json.dump(validation_summary, f, indent=2)
-    logger.info(f"Saved validation summary to {VALIDATION_REPORT_FILE}")
+        # Persist validation report
+        with open(VALIDATION_REPORT_FILE, "w", encoding="utf-8") as f:
+            json.dump(validation_summary, f, indent=2)
+        logger.info(f"Saved validation summary to {VALIDATION_REPORT_FILE}")
 
     return df, validation_summary
 
@@ -342,7 +343,7 @@ def clean_and_transform(
 def run_pipeline() -> Tuple[pd.DataFrame, Dict[str, Any]]:
     """Execute complete data extraction, cleaning, and validation pipeline."""
     orders_raw, returns_raw = load_raw_data()
-    return clean_and_transform(orders_raw, returns_raw)
+    return clean_and_transform(orders_raw, returns_raw, save=True)
 
 
 if __name__ == "__main__":
