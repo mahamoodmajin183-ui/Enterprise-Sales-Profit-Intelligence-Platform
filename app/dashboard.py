@@ -278,10 +278,24 @@ def load_data():
 df_raw = load_data()
 
 # ---------------------------------------------------------
-# Sidebar Controls & Global Filters
+# Sidebar Controls & Global Filters (Nova Analytics Brand)
 # ---------------------------------------------------------
-st.sidebar.image("https://img.icons8.com/fluency/96/combo-chart.png", width=64)
-st.sidebar.title("Analytics Filters")
+st.sidebar.markdown(
+    """
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; padding: 4px 0;">
+        <div style="background: #4F46E5; width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900; font-size: 1.3rem; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);">
+            ⚡
+        </div>
+        <div>
+            <div style="font-weight: 800; font-size: 1.2rem; color: #0F172A; letter-spacing: -0.02em;">NOVA</div>
+            <div style="font-size: 0.72rem; color: #64748B; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;">Enterprise Intelligence</div>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+st.sidebar.markdown("### 🎛️ Analytics Controls")
 st.sidebar.caption("Filter transactions dynamically across all views.")
 
 # Filter Reset Button
@@ -379,6 +393,30 @@ if df_filtered.empty:
 # ---------------------------------------------------------
 st.markdown(
     """
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #E2E8F0;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 8px 16px; display: flex; align-items: center; gap: 8px; color: #94A3B8; font-size: 0.9rem; width: 280px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
+                <span>🔍</span> <span>Search analytics or metrics...</span>
+            </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 6px 12px; font-size: 0.85rem; font-weight: 600; color: #475569; display: flex; align-items: center; gap: 6px;">
+                <span>📅</span> <span>Superstore FY 2011–2014</span>
+            </div>
+            <div style="background: #EEF2FF; color: #4F46E5; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; border: 1px solid rgba(79,70,229,0.2);">
+                🔔
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; background: #FFFFFF; border: 1px solid #E2E8F0; padding: 4px 12px 4px 6px; border-radius: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+                <div style="background: linear-gradient(135deg, #4F46E5, #7C3AED); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.85rem;">
+                    EX
+                </div>
+                <div>
+                    <div style="font-weight: 700; font-size: 0.82rem; color: #0F172A; line-height: 1.1;">Executive User</div>
+                    <div style="font-size: 0.7rem; color: #64748B;">Admin Role</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="top-greeting">
         <div>
             <h1 class="greeting-title">Welcome back, Executive Team 👋</h1>
