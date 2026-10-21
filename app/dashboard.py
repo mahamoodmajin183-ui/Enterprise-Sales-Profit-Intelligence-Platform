@@ -38,170 +38,226 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Custom Executive Styling & Typography
+# Custom Modern SaaS Styling & Typography (Nova Analytics Inspiration)
 st.markdown(
     """
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
     html, body, [class*="css"] {
-        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
-    /* Main background & view container */
+    /* Overall Light App Background */
     .stApp {
-        background: radial-gradient(circle at 15% 15%, #111827 0%, #0B0F19 60%, #030712 100%);
-        color: #F8FAFC;
+        background-color: #F8FAFC !important;
+        color: #1E293B !important;
     }
 
-    /* Sidebar Styling */
+    /* Clean White Sidebar */
     section[data-testid="stSidebar"] {
-        background-color: #0d131f !important;
-        border-right: 1px solid rgba(255, 255, 255, 0.07);
+        background-color: #FFFFFF !important;
+        border-right: 1px solid #E2E8F0 !important;
+        box-shadow: 2px 0 12px rgba(0, 0, 0, 0.02);
     }
-    section[data-testid="stSidebar"] h1, section[data-testid="stSidebar"] h2, section[data-testid="stSidebar"] h3 {
-        color: #F8FAFC !important;
-        font-weight: 700;
-    }
-
-    /* Modern Glassmorphic Metric Cards */
-    .metric-card {
-        background: linear-gradient(145deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.85) 100%);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 16px;
-        padding: 20px 22px;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
-        overflow: hidden;
-    }
-    .metric-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: linear-gradient(90deg, rgba(56, 189, 248, 0.4), rgba(129, 140, 248, 0.4));
-        opacity: 0.6;
-    }
-    .metric-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 14px 36px rgba(56, 189, 248, 0.16);
-        border-color: rgba(56, 189, 248, 0.35);
-    }
-    .metric-title {
-        color: #94A3B8;
-        font-size: 0.78rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.07em;
-        margin-bottom: 8px;
-    }
-    .metric-value {
-        color: #F8FAFC;
-        font-size: 1.85rem;
-        font-weight: 800;
-        line-height: 1.2;
-        letter-spacing: -0.02em;
-    }
-    .metric-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-        padding: 3px 10px;
-        border-radius: 20px;
-        font-size: 0.72rem;
-        font-weight: 600;
-        margin-top: 10px;
-        letter-spacing: 0.02em;
-    }
-    .badge-green {
-        background: rgba(16, 185, 129, 0.14);
-        color: #34D399;
-        border: 1px solid rgba(16, 185, 129, 0.28);
-    }
-    .badge-blue {
-        background: rgba(56, 189, 248, 0.14);
-        color: #38BDF8;
-        border: 1px solid rgba(56, 189, 248, 0.28);
-    }
-    .badge-amber {
-        background: rgba(245, 158, 11, 0.14);
-        color: #FBBF24;
-        border: 1px solid rgba(245, 158, 11, 0.28);
-    }
-    .badge-red {
-        background: rgba(244, 63, 94, 0.14);
-        color: #FB7185;
-        border: 1px solid rgba(244, 63, 94, 0.28);
+    section[data-testid="stSidebar"] h1, 
+    section[data-testid="stSidebar"] h2, 
+    section[data-testid="stSidebar"] h3 {
+        color: #0F172A !important;
+        font-weight: 700 !important;
     }
 
-    /* Provenance & Audit Header Banner */
-    .provenance-banner {
-        background: linear-gradient(90deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.7) 100%);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(56, 189, 248, 0.22);
-        border-left: 4px solid #38BDF8;
-        border-radius: 12px;
-        padding: 12px 20px;
-        margin-bottom: 24px;
+    /* Top Greeting Banner */
+    .top-greeting {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 0.84rem;
-        color: #CBD5E1;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+    }
+    .greeting-title {
+        font-size: 1.75rem;
+        font-weight: 800;
+        color: #0F172A;
+        letter-spacing: -0.02em;
+        margin: 0;
+    }
+    .greeting-sub {
+        color: #64748B;
+        font-size: 0.95rem;
+        margin-top: 4px;
+        margin-bottom: 0;
     }
 
-    /* Tabs Styling */
+    /* Modern Crisp SaaS Metric Cards */
+    .saas-card {
+        background: #FFFFFF;
+        border: 1px solid #F1F5F9;
+        border-radius: 18px;
+        padding: 20px;
+        box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        position: relative;
+    }
+    .saas-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.09);
+        border-color: #E2E8F0;
+    }
+    .card-top {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+    .icon-box {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+    }
+    .icon-purple {
+        background: #EEF2FF;
+        color: #6366F1;
+    }
+    .icon-emerald {
+        background: #ECFDF5;
+        color: #10B981;
+    }
+    .icon-blue {
+        background: #F0F9FF;
+        color: #0EA5E9;
+    }
+    .icon-amber {
+        background: #FEF3C7;
+        color: #D97706;
+    }
+    .icon-rose {
+        background: #FFE4E6;
+        color: #E11D48;
+    }
+    .icon-indigo {
+        background: #F5F3FF;
+        color: #7C3AED;
+    }
+
+    .card-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #64748B;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    .card-value {
+        font-size: 1.65rem;
+        font-weight: 800;
+        color: #0F172A;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+    }
+    .card-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 3px 8px;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+    .badge-up {
+        background: #ECFDF5;
+        color: #059669;
+    }
+    .badge-down {
+        background: #FEF2F2;
+        color: #DC2626;
+    }
+    .badge-neutral {
+        background: #F8FAFC;
+        color: #475569;
+        border: 1px solid #E2E8F0;
+    }
+
+    /* Provenance pill banner */
+    .saas-provenance {
+        background: #FFFFFF;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        padding: 10px 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.82rem;
+        color: #475569;
+        margin-bottom: 22px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    /* Modern Tabs Styling (Floating Pills) */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
         background-color: transparent;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        padding-bottom: 4px;
+        border-bottom: 1px solid #E2E8F0;
+        padding-bottom: 8px;
     }
     .stTabs [data-baseweb="tab"] {
-        height: 44px;
-        border-radius: 10px 10px 0 0;
-        padding: 8px 18px;
+        height: 42px;
+        border-radius: 10px;
+        padding: 6px 18px;
         font-weight: 600;
-        font-size: 0.92rem;
-        color: #94A3B8;
-        background-color: transparent;
-        border: none;
+        font-size: 0.9rem;
+        color: #64748B;
+        background-color: #FFFFFF;
+        border: 1px solid #E2E8F0;
         transition: all 0.2s ease;
     }
     .stTabs [data-baseweb="tab"]:hover {
-        color: #F8FAFC;
-        background: rgba(255, 255, 255, 0.04);
+        color: #4F46E5;
+        border-color: #CBD5E1;
+        background-color: #F8FAFC;
     }
     .stTabs [data-baseweb="tab"][aria-selected="true"] {
-        color: #38BDF8 !important;
-        background: rgba(56, 189, 248, 0.08) !important;
-        border-bottom: 2px solid #38BDF8 !important;
+        color: #FFFFFF !important;
+        background: #4F46E5 !important;
+        border-color: #4F46E5 !important;
+        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
     }
 
-    /* Dataframe & Table Container Styling */
+    /* Container Card Wrapper for charts */
+    .chart-container-box {
+        background: #FFFFFF;
+        border: 1px solid #F1F5F9;
+        border-radius: 18px;
+        padding: 22px;
+        box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+        margin-bottom: 20px;
+    }
+
+    /* Tables & Dataframe Polish */
     .stDataFrame {
-        border-radius: 12px;
+        background: #FFFFFF;
+        border-radius: 14px;
+        border: 1px solid #E2E8F0;
         overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.07);
     }
 
-    /* Buttons */
+    /* Button Primary */
     .stButton > button {
         border-radius: 10px;
         font-weight: 600;
-        font-size: 0.88rem;
+        background: #FFFFFF;
+        color: #0F172A;
+        border: 1px solid #CBD5E1;
         transition: all 0.2s ease;
-        border: 1px solid rgba(56, 189, 248, 0.3);
     }
     .stButton > button:hover {
-        border-color: #38BDF8;
-        box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+        background: #4F46E5;
+        color: #FFFFFF;
+        border-color: #4F46E5;
+        box-shadow: 0 4px 14px rgba(79, 70, 229, 0.2);
     }
     </style>
     """,
@@ -319,17 +375,15 @@ if df_filtered.empty:
     st.stop()
 
 # ---------------------------------------------------------
-# Main Page Header & Provenance
+# Main Page Header & Top Greeting (Nova Analytics Style)
 # ---------------------------------------------------------
 st.markdown(
     """
-    <div style="margin-bottom: 8px;">
-        <h1 style="font-size: 2.2rem; font-weight: 800; color: #F8FAFC; margin-bottom: 4px;">
-            Enterprise Sales & Profit Intelligence Platform
-        </h1>
-        <p style="color: #94A3B8; font-size: 1rem; margin-top: 0px;">
-            Omnichannel performance analytics, margin elasticity modeling, and loss-leader forensic audit.
-        </p>
+    <div class="top-greeting">
+        <div>
+            <h1 class="greeting-title">Welcome back, Executive Team 👋</h1>
+            <p class="greeting-sub">Monitor omnichannel sales performance, margin elasticity, and forensic health in one place.</p>
+        </div>
     </div>
     """,
     unsafe_allow_html=True,
@@ -338,52 +392,68 @@ st.markdown(
 # Provenance & Audit Header Banner
 st.markdown(
     f"""
-    <div class="provenance-banner">
-        <span><b>DATASET PROVENANCE:</b> Standard US Retail Superstore (Tableau Benchmark Open Data) | <b>RECORDS:</b> {len(df_filtered):,} / {len(df_raw):,} active</span>
-        <span><b>DATABASE:</b> DuckDB v1.5 Local Warehouse | <b>AUDIT:</b> <span style="color:#34D399; font-weight:600;">Reconciled 100%</span></span>
+    <div class="saas-provenance">
+        <span><b>DATASET PROVENANCE:</b> Standard US Retail Superstore (Tableau Benchmark) · <b>ACTIVE:</b> <span style="color:#4F46E5; font-weight:700;">{len(df_filtered):,}</span> / {len(df_raw):,} transactions</span>
+        <span><b>DATABASE:</b> DuckDB v1.5 Warehouse · <b>AUDIT STATUS:</b> <span style="color:#059669; font-weight:700;">● Reconciled 100%</span></span>
     </div>
     """,
     unsafe_allow_html=True,
 )
 
 # ---------------------------------------------------------
-# Executive KPI Ribbon
+# Executive KPI Ribbon (Nova Analytics Style Cards)
 # ---------------------------------------------------------
 col1, col2, col3, col4, col5, col6 = st.columns(6)
 
 with col1:
     st.markdown(
         f"""
-        <div class="metric-card">
-            <div class="metric-title">Total Revenue</div>
-            <div class="metric-value">${kpis['total_revenue']:,.0f}</div>
-            <div class="metric-badge badge-blue">{kpis['total_units']:,} Units Sold</div>
+        <div class="saas-card">
+            <div class="card-top">
+                <div class="icon-box icon-purple">💳</div>
+                <div>
+                    <div class="card-label">Revenue</div>
+                    <div class="card-value">${kpis['total_revenue']:,.0f}</div>
+                </div>
+            </div>
+            <div class="card-badge badge-up">↑ {kpis['total_units']:,} Units</div>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
 with col2:
-    profit_color = "badge-green" if kpis["total_profit"] >= 0 else "badge-red"
+    profit_badge = "badge-up" if kpis["total_profit"] >= 0 else "badge-down"
+    arrow = "↑" if kpis["total_profit"] >= 0 else "↓"
     st.markdown(
         f"""
-        <div class="metric-card">
-            <div class="metric-title">Operating Profit</div>
-            <div class="metric-value">${kpis['total_profit']:,.0f}</div>
-            <div class="metric-badge {profit_color}">Net Contribution</div>
+        <div class="saas-card">
+            <div class="card-top">
+                <div class="icon-box icon-emerald">📈</div>
+                <div>
+                    <div class="card-label">Profit</div>
+                    <div class="card-value">${kpis['total_profit']:,.0f}</div>
+                </div>
+            </div>
+            <div class="card-badge {profit_badge}">{arrow} Net Profit</div>
         </div>
         """,
         unsafe_allow_html=True,
     )
 
 with col3:
-    margin_color = "badge-green" if kpis["profit_margin_pct"] >= 10 else ("badge-amber" if kpis["profit_margin_pct"] >= 0 else "badge-red")
+    margin_badge = "badge-up" if kpis["profit_margin_pct"] >= 10 else ("badge-neutral" if kpis["profit_margin_pct"] >= 0 else "badge-down")
     st.markdown(
         f"""
-        <div class="metric-card">
-            <div class="metric-title">Profit Margin</div>
-            <div class="metric-value">{kpis['profit_margin_pct']:.1f}%</div>
-            <div class="metric-badge {margin_color}">Operating Ratio</div>
+        <div class="saas-card">
+            <div class="card-top">
+                <div class="icon-box icon-indigo">🎯</div>
+                <div>
+                    <div class="card-label">Margin</div>
+                    <div class="card-value">{kpis['profit_margin_pct']:.1f}%</div>
+                </div>
+            </div>
+            <div class="card-badge {margin_badge}">Target: ≥10%</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -392,10 +462,15 @@ with col3:
 with col4:
     st.markdown(
         f"""
-        <div class="metric-card">
-            <div class="metric-title">Total Orders</div>
-            <div class="metric-value">{kpis['total_orders']:,}</div>
-            <div class="metric-badge badge-blue">{kpis['total_customers']:,} Customers</div>
+        <div class="saas-card">
+            <div class="card-top">
+                <div class="icon-box icon-blue">👥</div>
+                <div>
+                    <div class="card-label">Orders</div>
+                    <div class="card-value">{kpis['total_orders']:,}</div>
+                </div>
+            </div>
+            <div class="card-badge badge-neutral">{kpis['total_customers']:,} Customers</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -404,10 +479,15 @@ with col4:
 with col5:
     st.markdown(
         f"""
-        <div class="metric-card">
-            <div class="metric-title">Avg Order Value</div>
-            <div class="metric-value">${kpis['avg_order_value']:,.1f}</div>
-            <div class="metric-badge badge-blue">${kpis['avg_profit_per_order']:,.1f} Profit/Order</div>
+        <div class="saas-card">
+            <div class="card-top">
+                <div class="icon-box icon-amber">🛍️</div>
+                <div>
+                    <div class="card-label">Avg Order</div>
+                    <div class="card-value">${kpis['avg_order_value']:,.1f}</div>
+                </div>
+            </div>
+            <div class="card-badge badge-up">${kpis['avg_profit_per_order']:,.1f} Profit</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -416,10 +496,15 @@ with col5:
 with col6:
     st.markdown(
         f"""
-        <div class="metric-card">
-            <div class="metric-title">Return Rate</div>
-            <div class="metric-value">{kpis['return_rate_pct']:.1f}%</div>
-            <div class="metric-badge badge-amber">{kpis['avg_discount_pct']:.1f}% Avg Disc</div>
+        <div class="saas-card">
+            <div class="card-top">
+                <div class="icon-box icon-rose">🔄</div>
+                <div>
+                    <div class="card-label">Return Rate</div>
+                    <div class="card-value">{kpis['return_rate_pct']:.1f}%</div>
+                </div>
+            </div>
+            <div class="card-badge badge-neutral">{kpis['avg_discount_pct']:.1f}% Disc</div>
         </div>
         """,
         unsafe_allow_html=True,

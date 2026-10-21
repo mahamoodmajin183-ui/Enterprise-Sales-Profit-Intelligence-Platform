@@ -10,18 +10,18 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-# Visual Design Palette
+# Visual Design Palette - Modern Clean SaaS Theme (Nova Analytics Style)
 THEME = {
-    "bg_color": "#0F172A",          # Deep slate background
-    "paper_color": "#1E293B",       # Card background
-    "text_color": "#F8FAFC",        # Crisp white
-    "muted_text": "#94A3B8",        # Slate grey
-    "grid_color": "#334155",        # Subtle gridlines
-    "primary": "#38BDF8",           # Cyan blue
-    "secondary": "#818CF8",         # Indigo
-    "profit_green": "#10B981",      # Emerald
-    "loss_red": "#F43F5E",          # Rose red
-    "accent_gold": "#FBBF24",       # Amber gold
+    "bg_color": "#F8FAFC",          # Ultra light canvas
+    "paper_color": "#FFFFFF",       # Pure white card surface
+    "text_color": "#0F172A",        # Deep navy/slate text
+    "muted_text": "#64748B",        # Slate grey labels
+    "grid_color": "#F1F5F9",        # Soft light divider lines
+    "primary": "#4F46E5",           # Vibrant Indigo/Purple brand
+    "secondary": "#818CF8",         # Soft Indigo
+    "profit_green": "#10B981",      # Crisp Emerald
+    "loss_red": "#EF4444",          # Crimson Rose
+    "accent_gold": "#F59E0B",       # Vivid Amber
 }
 
 
@@ -75,7 +75,7 @@ def create_monthly_trend_chart(df_monthly: pd.DataFrame) -> go.Figure:
     )
 
     fig.update_layout(
-        template="plotly_dark",
+        template="plotly_white",
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         font=dict(family="Inter, sans-serif", color=THEME["text_color"]),
@@ -134,7 +134,7 @@ def create_category_profitability_chart(df_category: pd.DataFrame) -> go.Figure:
     )
 
     fig.update_layout(
-        template="plotly_dark",
+        template="plotly_white",
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         font=dict(family="Inter, sans-serif", color=THEME["text_color"]),
@@ -186,7 +186,7 @@ def create_discount_elasticity_chart(df_discount: pd.DataFrame) -> go.Figure:
     )
 
     fig.update_layout(
-        template="plotly_dark",
+        template="plotly_white",
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         font=dict(family="Inter, sans-serif", color=THEME["text_color"]),
@@ -261,7 +261,7 @@ def create_anomaly_scatter(df_anomalies: pd.DataFrame) -> go.Figure:
                   annotation_text="Z=-3", annotation_font_color="#F43F5E")
 
     fig.update_layout(
-        template="plotly_dark",
+        template="plotly_white",
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         font=dict(family="Inter, sans-serif", color=THEME["text_color"]),
@@ -328,7 +328,7 @@ def create_trend_signal_chart(df_trend: pd.DataFrame) -> go.Figure:
     )
 
     fig.update_layout(
-        template="plotly_dark",
+        template="plotly_white",
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         font=dict(family="Inter, sans-serif", color=THEME["text_color"]),
@@ -414,7 +414,7 @@ def create_product_matrix_scatter(df_all_products: pd.DataFrame,
                   line_color="rgba(255,255,255,0.25)")
 
     fig.update_layout(
-        template="plotly_dark",
+        template="plotly_white",
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         font=dict(family="Inter, sans-serif", color=THEME["text_color"]),
@@ -462,7 +462,7 @@ def create_seasonality_chart(df_seasonality: pd.DataFrame) -> go.Figure:
     fig.add_hline(y=0, line_color="rgba(255,255,255,0.3)", line_dash="dot")
 
     fig.update_layout(
-        template="plotly_dark",
+        template="plotly_white",
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         font=dict(family="Inter, sans-serif", color=THEME["text_color"]),
@@ -504,7 +504,7 @@ def create_regional_map(df_state: pd.DataFrame) -> go.Figure:
     )
 
     fig.update_layout(
-        template="plotly_dark",
+        template="plotly_white",
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
         font=dict(family="Inter, sans-serif", color=THEME["text_color"]),
