@@ -38,90 +38,170 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Custom Glassmorphic Styling & Typography
+# Custom Executive Styling & Typography
 st.markdown(
     """
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
     html, body, [class*="css"] {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
-    .main {
-        background-color: #0B0F19;
+    /* Main background & view container */
+    .stApp {
+        background: radial-gradient(circle at 15% 15%, #111827 0%, #0B0F19 60%, #030712 100%);
+        color: #F8FAFC;
     }
 
-    /* Glassmorphic Metric Cards */
+    /* Sidebar Styling */
+    section[data-testid="stSidebar"] {
+        background-color: #0d131f !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    section[data-testid="stSidebar"] h1, section[data-testid="stSidebar"] h2, section[data-testid="stSidebar"] h3 {
+        color: #F8FAFC !important;
+        font-weight: 700;
+    }
+
+    /* Modern Glassmorphic Metric Cards */
     .metric-card {
-        background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
-        backdrop-filter: blur(12px);
+        background: linear-gradient(145deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.85) 100%);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 14px;
-        padding: 18px 20px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-radius: 16px;
+        padding: 20px 22px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+    .metric-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(56, 189, 248, 0.4), rgba(129, 140, 248, 0.4));
+        opacity: 0.6;
     }
     .metric-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 24px rgba(56, 189, 248, 0.15);
-        border-color: rgba(56, 189, 248, 0.3);
+        transform: translateY(-3px);
+        box-shadow: 0 14px 36px rgba(56, 189, 248, 0.16);
+        border-color: rgba(56, 189, 248, 0.35);
     }
     .metric-title {
         color: #94A3B8;
-        font-size: 0.82rem;
-        font-weight: 500;
+        font-size: 0.78rem;
+        font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: 6px;
+        letter-spacing: 0.07em;
+        margin-bottom: 8px;
     }
     .metric-value {
         color: #F8FAFC;
-        font-size: 1.75rem;
-        font-weight: 700;
+        font-size: 1.85rem;
+        font-weight: 800;
         line-height: 1.2;
+        letter-spacing: -0.02em;
     }
     .metric-badge {
-        display: inline-block;
-        padding: 2px 8px;
-        border-radius: 6px;
-        font-size: 0.75rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 0.72rem;
         font-weight: 600;
-        margin-top: 6px;
+        margin-top: 10px;
+        letter-spacing: 0.02em;
     }
     .badge-green {
-        background: rgba(16, 185, 129, 0.15);
+        background: rgba(16, 185, 129, 0.14);
         color: #34D399;
-        border: 1px solid rgba(16, 185, 129, 0.3);
+        border: 1px solid rgba(16, 185, 129, 0.28);
     }
     .badge-blue {
-        background: rgba(56, 189, 248, 0.15);
+        background: rgba(56, 189, 248, 0.14);
         color: #38BDF8;
-        border: 1px solid rgba(56, 189, 248, 0.3);
+        border: 1px solid rgba(56, 189, 248, 0.28);
     }
     .badge-amber {
-        background: rgba(245, 158, 11, 0.15);
+        background: rgba(245, 158, 11, 0.14);
         color: #FBBF24;
-        border: 1px solid rgba(245, 158, 11, 0.3);
+        border: 1px solid rgba(245, 158, 11, 0.28);
     }
     .badge-red {
-        background: rgba(239, 68, 68, 0.15);
-        color: #F87171;
-        border: 1px solid rgba(239, 68, 68, 0.3);
+        background: rgba(244, 63, 94, 0.14);
+        color: #FB7185;
+        border: 1px solid rgba(244, 63, 94, 0.28);
     }
 
-    /* Provenance Banner */
+    /* Provenance & Audit Header Banner */
     .provenance-banner {
-        background: rgba(30, 41, 59, 0.5);
-        border: 1px solid rgba(56, 189, 248, 0.2);
-        border-radius: 10px;
-        padding: 10px 16px;
-        margin-bottom: 20px;
+        background: linear-gradient(90deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.7) 100%);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(56, 189, 248, 0.22);
+        border-left: 4px solid #38BDF8;
+        border-radius: 12px;
+        padding: 12px 20px;
+        margin-bottom: 24px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 0.85rem;
+        font-size: 0.84rem;
+        color: #CBD5E1;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Tabs Styling */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 8px;
+        background-color: transparent;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 4px;
+    }
+    .stTabs [data-baseweb="tab"] {
+        height: 44px;
+        border-radius: 10px 10px 0 0;
+        padding: 8px 18px;
+        font-weight: 600;
+        font-size: 0.92rem;
         color: #94A3B8;
+        background-color: transparent;
+        border: none;
+        transition: all 0.2s ease;
+    }
+    .stTabs [data-baseweb="tab"]:hover {
+        color: #F8FAFC;
+        background: rgba(255, 255, 255, 0.04);
+    }
+    .stTabs [data-baseweb="tab"][aria-selected="true"] {
+        color: #38BDF8 !important;
+        background: rgba(56, 189, 248, 0.08) !important;
+        border-bottom: 2px solid #38BDF8 !important;
+    }
+
+    /* Dataframe & Table Container Styling */
+    .stDataFrame {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    /* Buttons */
+    .stButton > button {
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 0.88rem;
+        transition: all 0.2s ease;
+        border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .stButton > button:hover {
+        border-color: #38BDF8;
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
     }
     </style>
     """,
